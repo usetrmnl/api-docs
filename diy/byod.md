@@ -11,9 +11,9 @@ Making your own TRMNL from scratch is not an economically rational decision, but
 Here's what you can expect to spend per component:
 
 * Battery, $5 (unnecessary if you prefer plugged in)
-* EPD screen, $65 (see the Waveshare 7.5" on Amazon)
+* EPD screen, $50 ([this one](https://amazon.com/dp/B075R69T93/) is compatible)
 * Microcontroller, $3-50 (depends if you build/solder yourself or leverage a PCB prototyper)
-* Enclosure/case, $3-20 (design + 3D print yourself or use a print farm)
+* Enclosure/case, $3-20 (print [one of ours](https://github.com/usetrmnl/mounts) or design your own)
 
 If you know what you're doing and just need some firmware or a server client, here ya go:
 
@@ -29,7 +29,7 @@ When you're ready to build plugins:
 
 Email team@usetrmnl.com if you have any questions.
 
-### Hardware requirements
+### DIY Kit
 
-(_Coming Soon_)
+(_Coming Soon - Partnership secured in May 2025_)
 
