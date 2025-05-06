@@ -1,5 +1,5 @@
 ---
-description: Ability for users to manage their plugin on your weber server.
+description: Ability for users to manage their plugin on your web server.
 ---
 
 # Plugin Management Flow
