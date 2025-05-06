@@ -96,5 +96,5 @@ curl "https://byos.local/api/setup/" \
 
 ```
 
-💡 For a detailed breakdown of all API endpoints and what they can do, please refer to the [Terminus API Documentation](https://github.com/usetrmnl/byos_hanami?tab=readme-ov-file#apis).
+💡 For a detailed breakdown of all API endpoints and what they can do, please refer to the [Terminus API Documentation](https://github.com/usetrmnl/byos_hanami?tab=readme-ov-file#apis) or the [TRMNL API](https://github.com/usetrmnl/trmnl-api) gem which provides a Ruby API client for talking to our servers.
 
