@@ -1,6 +1,6 @@
 # ImageMagick Guide
 
-TRMNL supports BMP3 and PNG images natively starting FW version 1.5.2. Below are some of the way on how you can generate TRMNL compatible images.
+TRMNL supports BMP3 and PNG images natively, starting with FW v1.5.2 ([release](https://github.com/usetrmnl/firmware/releases/tag/v1.5.2)). Below are some tips to generate TRMNL compatible images for DIY devices or [Alias](https://help.usetrmnl.com/en/articles/10701448-alias-plugin)/[Redirect](https://help.usetrmnl.com/en/articles/11035846-redirect-plugin) plugin applications.
 
 ## Generating a BMP3 image <a href="#h_de4d75d195" id="h_de4d75d195"></a>
 
