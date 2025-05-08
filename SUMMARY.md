@@ -17,6 +17,10 @@
 * [BYOD/S](diy/byod-s.md)
 * [BYOS](diy/byos.md)
 
+***
+
+* [ImageMagick Guide](imagemagick-guide.md)
+
 ## Plugin Marketplace
 
 * [Introduction](plugin-marketplace/introduction.md)
