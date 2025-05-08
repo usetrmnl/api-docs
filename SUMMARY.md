@@ -36,6 +36,7 @@
 * [Introduction](private-api/introduction.md)
 * [Fetch Screen Content](private-api/fetch-screen-content.md)
 * [Fetch Plugin Content](private-api/fetch-plugin-content.md)
+* [Account API](private-api/account-api.md)
 
 ## Partners API
 
