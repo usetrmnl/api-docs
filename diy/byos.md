@@ -6,6 +6,12 @@ description: Buy a TRMNL device, then point it at your own server.
 
 First, purchase a TRMNL from our [home page](https://usetrmnl.com). Then choose a BYOS implementation for your stack. Our reference implementation is Terminus (Hanami) and we recommended you get started there but you can also choose from other languages/frameworks as well.
 
+**Screencast**
+
+The following screencast will walk you through setting up Terminus and connecting your device to it.
+
+{% embed url="https://youtu.be/Z_XS7py05fA?si=hROpfIUw-kkJiEOV" %}
+
 **Why BYOS?**
 
 TRMNL intends to ensure that **every device is un-brickable and can run with zero external dependencies**.
