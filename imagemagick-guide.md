@@ -24,7 +24,7 @@ Please note that the output of above needs to match exactly with your file.
 Convert command
 
 ```
-magick input.png -monochrome -colors 2 -depth 1 -strip - png:output.png
+magick input.png -monochrome -colors 2 -depth 1 -strip png:output.png
 ```
 
 Identify command
