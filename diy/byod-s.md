@@ -20,11 +20,7 @@ The TRMNL web server generates bitmap images. When a device pings our web server
 }
 ```
 
-You can demo this process from the command line by installing [ImageMagick](https://en.wikipedia.org/wiki/ImageMagick), then invoking `convert`:
-
-```
-convert regular_img.png -depth 1 eink_compatible.bmp
-```
+You can demo this process from the command line by installing [ImageMagick](https://en.wikipedia.org/wiki/ImageMagick), then invoking `convert` command. Visit our [imagemagick guide](../imagemagick-guide.md)
 
 With this in mind, building your own server simply necessitates creating an endpoint that responds with links to firmware-compatible Bitmap images.
 
