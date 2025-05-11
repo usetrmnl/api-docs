@@ -18,18 +18,11 @@ GET /api/display
 # response body example
 {
   "image_url"=>"https://trmnl.s3.us-east-2.amazonaws.com/path-to-img.bmp",
-  "image_name"=>"2024-09-20T00:00:00",
-  "update_firmware"=>false,
+  "filename"=>"2025-05-10-plugin-T00:00:00",
+  "update_firmware"=>false
 }
 ```
 
-The TRMNL server leverages your device's immutable Mac Address (`ID` ) header during initial setup, then depends on the `Access-Token`header for subsequent requests.
+**With a device's API key you can request content without a TRMNL device or TRMNL firmware**.
 
-Thus, **if you know your device's API key, you can request content without a TRMNL device or TRMNL firmware**.
-
-In these \[WIP] Private API docs we'll outline a few ways to take advantage of this information for your own privacy, security, and experimentation purposes.
-
-{% hint style="info" %}
-**Only devices with the Developer add-on** may access their own Access Token. You may unlock this feature anytime from your [Devices > Edit](https://usetrmnl.com/devices/) page for a one-time fee.
-{% endhint %}
-
+In the following Private API docs we'll outline a few ways to take advantage of this information for your own privacy, security, and experimentation purposes.
