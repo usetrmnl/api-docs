@@ -8,8 +8,6 @@ description: Leverage RESTful endpoints to generate custom screens on your TRMNL
 ### Before you begin
 
 Creating screens requires a Private Plugin instance inside your TRMNL account. This is currently available via the web interface only. Simply navigate to [Plugins > Private Plugin > New](https://usetrmnl.com/plugin_settings/new?keyname=private_plugin).
-
-**Only devices with the Developer add-on** may access their own Access Token. You may unlock this feature anytime from your [Devices > Edit](https://usetrmnl.com/devices/) page for a one-time fee.
 {% endhint %}
 
 If your private plugin's "Strategy" is set to Webhook, you can provide data to TRMNL's server up to 1x every 5 mins. Requests sent at a faster pace will receive a `429` rate limit response.
