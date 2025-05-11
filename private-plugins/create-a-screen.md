@@ -39,6 +39,14 @@ You will see this payload inside the Your Variables dropdown of the Markup Edito
 
 <figure><img src="../.gitbook/assets/TRMNL - Your Variables dropdown.png" alt=""><figcaption><p>Your variables - available inside the Markup Editor</p></figcaption></figure>
 
+### Get merge variable content
+
+To fetch existing `merge_variables` from a private plugin, `GET` from the same endpoint:
+
+```
+curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234"
+```
+
 ### Update existing content
 
 If your private plugin needs to maintain state over time, for example an ever growing todo list or a data visualization, you may prefer to send only "new" data points to your TRMNL plugin.
