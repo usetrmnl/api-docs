@@ -8,13 +8,15 @@ description: Creating image content to display on a user's device.
 
 TRMNL generates a screen every X minutes, where X is the refresh frequency set by the user.
 
-TRMNL generates screens by sending a POST request to the `plugin_markup_url` endpoint you specified during [Plugin Creation](plugin-creation.md). The request body will include the `user_uuid` (that particular user's plugin connection UUID). The request header contains an `authorization` key with the user's plugin connection `access_token`as the Bearer token. Here's an example of our server request:
+TRMNL generates screens by sending a POST request to the `plugin_markup_url` endpoint you specified during [Plugin Creation](plugin-creation.md). The request body will include the `user_uuid` (that particular user's plugin connection UUID) and some metadata. The request header contains an `authorization` key with the user's plugin connection `access_token`as the Bearer token. Here's an example of our server request:
 
 ```bash
 curl -XPOST 'https://your-server.com/your-markup-url' \
 -H 'Authorization: Bearer xxx' \
--d 'user_uuid=xx'
+-d 'user_uuid=xx&trmnl=<metadata-object>'
 ```
+
+The `trmnl` object in this payload may or may not be useful for your plugin, but includes the user-defined instance name, device dimensions, user timezone, and so on.
 
 Your web server should respond with HTML inside root nodes named `markup`, `markup_quadrant`, and so on to satisfy each layout offered by TRMNL. This markup should include whatever values you want the user to see rendered on their screen.
 
