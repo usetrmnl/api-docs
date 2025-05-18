@@ -16,7 +16,34 @@ curl -XPOST 'https://your-server.com/your-markup-url' \
 -d 'user_uuid=xx&trmnl=<metadata-object>'
 ```
 
-The `trmnl` object in this payload may or may not be useful for your plugin, but includes the user-defined instance name, device dimensions, user timezone, and so on.
+The `trmnl` object in this payload may or may not be useful for your plugin, but includes the user-defined instance name, device dimensions, user timezone, and so on. Here's an example, subject to change:
+
+```
+{
+  "user": {
+    "name": "Jim Bob",
+    "first_name": "Jim",
+    "last_name": "Bob",
+    "locale": "en",
+    "time_zone": "Eastern Time (US & Canada)",
+    "time_zone_iana": "America/New_York",
+    "utc_offset": -14400
+  },
+  "device": {
+    "friendly_id": "XXXXXX",
+    "percent_charged": 74.17,
+    "wifi_strength": 50,
+    "height": 480,
+    "width": 800
+  },
+  "system": {
+    "timestamp_utc": 1747596567
+  },
+  "plugin_settings": {
+    "instance_name": "Upcoming Assignments"
+  }
+}
+```
 
 Your web server should respond with HTML inside root nodes named `markup`, `markup_quadrant`, and so on to satisfy each layout offered by TRMNL. This markup should include whatever values you want the user to see rendered on their screen.
 
