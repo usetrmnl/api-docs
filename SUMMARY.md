@@ -10,6 +10,10 @@
 * [Screen Templating (Graphics)](private-plugins/templates-advanced.md)
 * [Create a screen](private-plugins/create-a-screen.md)
 
+***
+
+* [Reusing Markup](reusing-markup.md)
+
 ## DIY TRMNL (Advanced) <a href="#diy" id="diy"></a>
 
 * [Introduction](diy/introduction.md)
