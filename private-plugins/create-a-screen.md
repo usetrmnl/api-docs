@@ -49,20 +49,35 @@ curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234"
 
 ### Update existing content
 
-If your private plugin needs to maintain state over time, for example an ever growing todo list or a data visualization, you may prefer to send only "new" data points to your TRMNL plugin.
+If your private plugin needs to maintain state over time, for example an ever-growing todo list or a data visualization, you may prefer to send only "new" data points to your TRMNL plugin.
 
-For this use case, add `deep_merge: true` to your payload like so:
+There are two strategies to accomplish this: `deep_merge`, and `stream`.
+
+#### Deep merge strategy
+
+The `deep_merge` strategy combines existing key/value pairs with the new values incoming on the webhook. It's a good way to update nested data with only a few values here and there.
 
 ```
 curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234" \
   -H "Content-Type: application/json" \
-  -d '{"merge_variables": {"points": {"17469803752": 4}}, "deep_merge": "true"}' \
+  -d '{"merge_variables": {"sensor": {"temperature": 42}}, "merge_strategy": "deep_merge"}' \
   -X POST
 ```
 
-Now you may iterate through your previous + new key/value pairs inside your markup, for example:
+#### Stream strategy
 
-<figure><img src="../.gitbook/assets/TRMNL-webhook-deep-merge-example.png" alt=""><figcaption></figcaption></figure>
+The `stream` strategy is useful for accumulating values in arrays. Any top-level arrays are appended with the incoming values, and the `stream_limit` parameter ensures that old values drop off the arrays so they don't grow forever.
+
+```
+curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234" \
+  -H "Content-Type: application/json" \
+  -d '{"merge_variables": {"temperatures": [40, 42]}, "merge_strategy": "stream", "stream_limit": 10}' \
+  -X POST
+```
+
+Now you may iterate through the combined data inside your markup, for example:
+
+<figure><img src="../.gitbook/assets/CleanShot 2025-05-28 at 14.33.07@2x.png" alt=""><figcaption></figcaption></figure>
 
 ## Create a screen (polling strategy)
 
