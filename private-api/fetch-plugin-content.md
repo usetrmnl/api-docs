@@ -16,7 +16,7 @@ First, set up + hide an instance of the plugin you want to re-build yourself wit
 
 1. Connect the Weather, Stock Prices, or any Calendar plugin (more coming soon)
 2. Make note of the PluginSetting integer ID in the URL (`/plugin_settings/<id-here>`)
-3. Navigate to Playlists and "hide" the automatically added item by clicking the eyeball icon
+3. Navigate to Playlists and "hide" the automatically added item by clicking the eyeball icon. **This is important** because only plugins that are on a playlist will be refreshed. Hide to avoid duplicate (native) content.
 
 Next, build a Private Plugin.
 
