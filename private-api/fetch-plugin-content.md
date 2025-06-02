@@ -14,9 +14,9 @@ For more context on this feature, go [here](https://usetrmnl.com/blog/calendar-h
 
 First, set up + hide an instance of the plugin you want to re-build yourself with raw data. This instructs TRMNL to sync and parse data on your behalf.
 
-1. Connect the Weather, Stock Prices, or any Calendar plugin (more coming soon)
+1. Connect the Weather, Stock Prices, or any Calendar plugin (email support@usetrmnl.com to make additional native plugins Data Mode friendly)
 2. Make note of the PluginSetting integer ID in the URL (`/plugin_settings/<id-here>`)
-3. Navigate to Playlists and "hide" the automatically added item by clicking the eyeball icon. **This is important** because only plugins that are on a playlist will be refreshed. Hide to avoid duplicate (native) content.
+3. Navigate to Playlists and "hide" the native plugin that was automatically added by clicking the eyeball icon. **This is important** because only plugins on a live playlist will be refreshed. By hiding to avoid this native plugin, your Data Mode plugin (below) will always have fresh data.
 
 Next, build a Private Plugin.
 
