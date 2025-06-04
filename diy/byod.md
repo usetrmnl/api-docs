@@ -23,16 +23,17 @@ If you know what you're doing and just need some firmware or a server client, he
 When you're ready to start building:
 
 1. Buy access to the TRMNL web app + API: [https://shop.usetrmnl.com/products/byod](https://shop.usetrmnl.com/products/byod)
-2. Create a virtual device: [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)
+2. Create a (temporary) virtual device: [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)
 3. Register your DIY device's MAC ([find it](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address)): [https://usetrmnl.com/devices](https://usetrmnl.com/devices) (click yours to edit)
 4. Flash our firmware to your DIY device: [easy](https://usetrmnl.com/flash), [advanced](https://help.usetrmnl.com/en/articles/10271569-manually-flash-firmware)
 5. Set up your DIY device by turning it on + following the steps to pair WiFi
-6. Your DIY device will produce a 6-digit ID; input this inside TRMNL > top-right dropdown > add new device
-7. Stay focused
+6. Your DIY device will produce a 6-digit ID; input this inside your existing TRMNL account, via the top-right dropdown > add new device. This will replace your temporary virtual device from Step 2
+7. Connect native apps or start building private plugins from the Plugins tab
+8. Stay focused
 
 Email team@usetrmnl.com if you have any questions, or join the Developer-only Discord, accessible from your Account tab.
 
 ### DIY Kit
 
-(_Coming Soon - Partnership secured in May 2025_)
+(_Coming at the end of June, 2025_)
 
