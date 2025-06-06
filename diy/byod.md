@@ -37,3 +37,7 @@ Email team@usetrmnl.com if you have any questions, or join the Developer-only Di
 
 (_Coming at the end of June, 2025_)
 
+If you're a Seeed Studio early adopter, check out this helpful guide from a mutual customer. You can also  leverage the [Seeed Wiki guide to TRMNL](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/).
+
+{% embed url="https://www.youtube.com/watch?v=QAGTRrbQSBE" %}
+
