@@ -7,7 +7,7 @@ description: Retrieve parsed plugin JSON data for your own templates.
 No matter how many customizations we add to native plugins, there will always be a good reason to change them. Instead of cluttering our interface and adding complexity for other users, TRMNL offers a "data only" mode for select native plugins.
 
 {% hint style="info" %}
-For more context on this feature, go [here](https://usetrmnl.com/blog/calendar-hackathon).
+For more context on this feature, go [here](https://usetrmnl.com/blog/calendar-hackathon). For live examples, [go here](https://usetrmnl.com/blog/introducing-data-mode).
 {% endhint %}
 
 ### How it works
