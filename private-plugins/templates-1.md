@@ -19,6 +19,7 @@ Create an HTML file with our plugins CSS embedded in the `<head>`.
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://usetrmnl.com/css/latest/plugins.css">
   </head>
   <body class="environment trmnl">
