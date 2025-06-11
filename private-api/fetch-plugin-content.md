@@ -38,6 +38,9 @@ Parsed data will appear inside a `data` node of the "Merge Variables" dropdown. 
 
 If you only want to make small changes to the TRMNL native design, you can steal that markup here:
 
-[https://usetrmnl.com/plugins/demo](https://usetrmnl.com/plugins/demo) (requires login)
+* [https://github.com/usetrmnl/plugins/](https://github.com/usetrmnl/plugins/) (raw inside `lib`, let us know what else you need)
+* [https://usetrmnl.com/plugins/demo](https://usetrmnl.com/plugins/demo) (rendered output, requires login)
 
 Just click the plugin you're rebuilding, and all layouts will appear with sample data embedded. If you've connected a plugin natively, your latest cached JSON will be embedded instead of demo data.
+
+Note that native plugins leverage the ERB templating language, however, so markup `<% variable %>` references will need to be replaced with `{{ variable }}` and so forth.
