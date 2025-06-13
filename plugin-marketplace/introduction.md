@@ -1,7 +1,5 @@
 ---
-description: >-
-  TRMNL's public marketplace lets any user publish or use another customer's
-  integration.
+description: TRMNL's public marketplace lets any user publish or use another user's work.
 ---
 
 # Introduction
