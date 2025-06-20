@@ -55,10 +55,28 @@ The following provides a detailed breakdown of each of the above features:
 
 At a minimum, the following API endpoints should be supported for all BYOS implementations:
 
+#### Setup
+
+```shell
+curl "https://byos.local/api/setup/" \
+    -H 'ID: <mac:address:of:the:device>' \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json'
+```
+
 #### Display
 
 ```bash
 curl "http://byos.local/api/display" \
+     -H 'Access-Token: <api_key>' \
+     -H 'Accept: application/json' \
+     -H 'Content-Type: application/json'
+```
+
+#### Logs
+
+```bash
+curl "http://byos.local/api/log" \
      -H 'Access-Token: <api_key>' \
      -H 'Accept: application/json' \
      -H 'Content-Type: application/json'
@@ -77,25 +95,6 @@ curl -X "POST" "http://byos.local/api/images" \
    "file_name": "demo"
  }
 }'
-```
-
-#### Logs
-
-```bash
-curl "http://byos.local/api/log" \
-     -H 'Access-Token: <api_key>' \
-     -H 'Accept: application/json' \
-     -H 'Content-Type: application/json'
-```
-
-#### Setup
-
-```
-curl "https://byos.local/api/setup/" \
-    -H 'ID: <mac:address:of:the:device>' \
-    -H 'Accept: application/json' \
-    -H 'Content-Type: application/json'
-
 ```
 
 💡 For a detailed breakdown of all API endpoints and what they can do, please refer to the [Terminus API Documentation](https://github.com/usetrmnl/byos_hanami?tab=readme-ov-file#apis) or the [TRMNL API](https://github.com/usetrmnl/trmnl-api) gem which provides a Ruby API client for talking to our servers.
