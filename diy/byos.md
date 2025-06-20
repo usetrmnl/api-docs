@@ -85,7 +85,7 @@ curl "http://byos.local/api/log" \
 #### Images
 
 ```bash
-curl -X "POST" "http://byos.local/api/images" \
+curl -X "POST" "http://byos.local/api/screens" \
     -H 'Access-Token: <api_key>' \
     -H 'Accept: application/json' \
     -H 'Content-Type: application/json' \
