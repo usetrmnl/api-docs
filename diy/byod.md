@@ -20,6 +20,8 @@ If you know what you're doing and just need some firmware or a server client, he
 * Firmware: [https://github.com/usetrmnl/firmware](https://github.com/usetrmnl/firmware)
 * Server (multiple options): [https://docs.usetrmnl.com/go/diy/byos](https://docs.usetrmnl.com/go/diy/byos)
 
+### Quickstart
+
 When you're ready to start building:
 
 1. Buy access to the TRMNL web app + API: [https://shop.usetrmnl.com/products/byod](https://shop.usetrmnl.com/products/byod)
@@ -35,7 +37,11 @@ Email team@usetrmnl.com if you have any questions, or join the Developer-only Di
 
 ### DIY Kit
 
-(_Coming at the end of June, 2025_)
+(_Coming July 2, 2025 - tune into the live stream below_)
+
+{% embed url="https://www.youtube.com/watch?v=MZ8HMSGqBWI" %}
+TRMNL + Seeed Studio partnership launch
+{% endembed %}
 
 If you're a Seeed Studio early adopter, check out this helpful guide from a mutual customer. You can also  leverage the [Seeed Wiki guide to TRMNL](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/).
 
