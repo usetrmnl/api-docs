@@ -25,15 +25,14 @@ If you know what you're doing and just need some firmware or a server client, he
 When you're ready to DIY a TRMNL:
 
 1. Buy access to the TRMNL web app + API: [https://shop.usetrmnl.com/products/byod](https://shop.usetrmnl.com/products/byod)
-2. Create a (temporary) virtual device: [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)
-3. [Set](https://usetrmnl.com/devices/current/edit) your DIY device's MAC ([find it](https://help.usetrmnl.com/en/articles/10614205-finding-your-trmnl-mac-address))
+2. Create a BYOD device: [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)
+3. Visit your [device settings page](https://usetrmnl.com/devices/current/edit) to select your [Device Model](https://help.usetrmnl.com/en/articles/11547008-device-model-faq) and set your DIY device's MAC address
 4. Flash [our firmware](https://github.com/usetrmnl/firmware) to your DIY device + follow steps to pair WiFi. These steps are different pending the guide you're using (Kindle, Kobo, Android, etc)
-5. Your DIY device will produce a 6-digit ID; input this inside your existing TRMNL account, via the top-right dropdown > add new device. This will replace your temporary virtual device from Step 2
-6. Select your [Device Model](https://help.usetrmnl.com/en/articles/11547008-device-model-faq) from the dropdown picker on your [device settings page](https://usetrmnl.com/devices/current/edit)
-7. Connect native apps or start building private plugins from the Plugins tab
-8. Stay focused
+5. Your DIY device will render a 6-digit ID; this is your device's Friendly ID and is already visible inside your Device settings. No action is required.
+6. Connect native apps or start building private plugins from the Plugins tab
+7. Stay focused
 
-If you have any questions, send us a live chat or join the Developer-only Discord, accessible from your Account tab.
+If you have questions, send us a live chat or join the Developer-only Discord, accessible from your [Account](https://usetrmnl.com/account) tab.
 
 ### DIY Kit
 
