@@ -36,7 +36,7 @@ If you have questions, send us a live chat or join the Developer-only Discord, a
 
 ### DIY Kit
 
-(_Coming July 2, 2025 - tune into the live stream below_)
+(_Coming July 17, 2025 - tune into the live stream below_)
 
 {% embed url="https://www.youtube.com/watch?v=MZ8HMSGqBWI" %}
 TRMNL + Seeed Studio partnership launch
