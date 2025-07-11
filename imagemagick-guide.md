@@ -19,12 +19,18 @@ output.bmp BMP3 800x480 800x480+0+0 1-bit sRGB 2c 48062B 0.020u 0:00.001
 
 Please note that the output of above needs to match exactly with your file.
 
-## Generating a PNG image <a href="#h_6b95d41fbd" id="h_6b95d41fbd"></a>
+## Generating a PNG image (1 bit) <a href="#h_6b95d41fbd" id="h_6b95d41fbd"></a>
 
-Convert command
+Converting an image
 
 ```
-magick input.png -monochrome -colors 2 -depth 1 -strip png:output.png
+magick input.png -monochrome -colors 2 -depth 1 -strip png:output.png    
+```
+
+Dithering an image
+
+```
+magick input.png -dither FloydSteinberg -remap pattern:gray50 -depth 1 -strip png:output.png
 ```
 
 Identify command
@@ -33,3 +39,4 @@ Identify command
 % magick identify output.png 
 output.png PNG 800x480 800x480+0+0 8-bit Grayscale Gray 2c 1607B 0.000u 0:00.000
 ```
+
