@@ -18,7 +18,7 @@ curl -XPOST 'https://your-server.com/your-markup-url' \
 
 The `trmnl` object in this payload may or may not be useful for your plugin, but includes the user-defined instance name, device dimensions, user timezone, and so on. Here's an example, subject to change:
 
-```
+```json
 {
   "user": {
     "name": "Jim Bob",
