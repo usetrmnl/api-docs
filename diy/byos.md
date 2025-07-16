@@ -59,8 +59,7 @@ At a minimum, the following API endpoints should be supported for all BYOS imple
 
 ```shell
 curl "https://byos.local/api/setup/" \
-    -H 'ID: <mac:address:of:the:device>' \
-    -H 'Accept: application/json' \
+    -H 'ID: <device_mac_address>' \
     -H 'Content-Type: application/json'
 ```
 
@@ -68,8 +67,7 @@ curl "https://byos.local/api/setup/" \
 
 ```bash
 curl "http://byos.local/api/display" \
-     -H 'Access-Token: <api_key>' \
-     -H 'Accept: application/json' \
+     -H 'ID: <device_mac_address>' \
      -H 'Content-Type: application/json'
 ```
 
@@ -77,17 +75,15 @@ curl "http://byos.local/api/display" \
 
 ```bash
 curl "http://byos.local/api/log" \
-     -H 'Access-Token: <api_key>' \
-     -H 'Accept: application/json' \
+     -H 'ID: <device_mac_address>' \
      -H 'Content-Type: application/json'
 ```
 
-#### Images
+#### Screens
 
 ```bash
 curl -X "POST" "http://byos.local/api/screens" \
-    -H 'Access-Token: <api_key>' \
-    -H 'Accept: application/json' \
+    -H 'Access-Token: <device_api_key>' \
     -H 'Content-Type: application/json' \
     -d $'{
  "image": {
