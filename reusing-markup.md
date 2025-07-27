@@ -28,12 +28,10 @@ Our Liquid implementation provides a new tag, `{% template [name] %}` , which wo
 
 ```liquid
 <!-- shared markup -->
-{% raw %}
 {% template say_hello %}
 Hello there, {{ name }}.
 {% endtemplate %}
 
 <!-- view markup -->
 {% render "say_hello", name: "General Kenobi" %}
-{% endraw %}
 ```
