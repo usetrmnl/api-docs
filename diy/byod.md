@@ -43,12 +43,16 @@ On July 17, 2025 we announced a partnership with Seeed Studio.&#x20;
 TRMNL + Seeed Studio partnership launch
 {% endembed %}
 
-If you're a Seeed Studio early adopter (XIAO esp32-c3 board), check out this helpful guide from a mutual customer. You can also leverage the [Seeed Wiki guide to TRMNL](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/).
+If you're a Seeed Studio early adopter (XIAO esp32-c3 board), check out the community guides below for in-depth setup assistance. You can also leverage the [Seeed Wiki guide to TRMNL](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/).
+
+{% embed url="https://www.youtube.com/watch?v=Tr__8OlQQms" %}
+E-Paper Dashboard without coding | Xiao E-Paper Display and TRMNL Firmware
+{% endembed %}
 
 {% embed url="https://www.youtube.com/watch?v=QAGTRrbQSBE" %}
 Seeed Studio XIAO Esp32-C3 board
 {% endembed %}
 
-### Need Support?
+### Need Help?
 
 Send us a live chat or join the Developer-only Discord, accessible from your [Account](https://usetrmnl.com/account) tab.
