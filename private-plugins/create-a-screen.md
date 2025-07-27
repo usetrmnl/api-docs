@@ -1,27 +1,35 @@
 ---
-description: Leverage RESTful endpoints to generate custom screens on your TRMNL device.
+description: Send a payload of merge variables to create a custom screen.
 ---
 
-# Create a screen
+# Webhooks
 
 {% hint style="info" %}
-### Before you begin
+#### Before you begin
 
-Creating screens requires a Private Plugin instance inside your TRMNL account. This is currently available via the web interface only. Simply navigate to [Plugins > Private Plugin > New](https://usetrmnl.com/plugin_settings/new?keyname=private_plugin).
+Learn how to build Private Plugins [here](https://help.usetrmnl.com/en/articles/9510536-private-plugins). The guide below only explains how to use the "Webhook" data retrieval strategy.
 {% endhint %}
 
-If your private plugin's "Strategy" is set to Webhook, you can provide data to TRMNL's server up to 12x per hour. Requests sent at a faster pace will receive a `429` rate limit response.
+### Rate Limits
+
+_Request volume_
+
+You may send data to TRMNL's server up to 12x per hour. [TRMNL+](https://help.usetrmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 30x payloads per hour. Webhooks sent at a faster pace will receive a `429` rate limit response.
+
+_Request size_
+
+You may send up to 2kb of data. [TRMNL+](https://help.usetrmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 5kb of data. To stay within these boundaries while also creating a data rich experience, consider using the `deep_merge` and `stream` strategies documented below.
 
 ### Authorization
 
 TRMNL has Device API Keys, User API Keys, and Plugin Setting UUIDs. For private plugin screen generation, we'll use your Plugin Settings UUID.
 
-This is accessible from your plugin instance's configuration form, in a field called Webhook URL.
+This is accessible from your plugin instance's configuration form > Webhook URL field.
 
 <figure><img src="../.gitbook/assets/TRMNL Private Plugin Webhook URL w UUID.png" alt=""><figcaption><p>Private Plugin Webhook URL w/ UUID</p></figcaption></figure>
 
 {% hint style="info" %}
-**Note:**  you must "save" (create) a private plugin instance before a UUID and Webhook URL will be generated.
+**Note:** you must "save" (create) a private plugin instance to generate a UUID and Webhook URL.
 {% endhint %}
 
 ### Set new content
@@ -77,23 +85,7 @@ curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234" \
 
 Now you may iterate through the combined data inside your markup, for example:
 
-<figure><img src="../.gitbook/assets/CleanShot 2025-05-28 at 14.33.07@2x.png" alt=""><figcaption></figcaption></figure>
-
-## Create a screen (polling strategy)
-
-If your private plugin's "Strategy" is set to Polling, the TRMNL server will periodically fetch for new data from an endpoint of your choice.
-
-Simply provide 1 or more "Polling URL" inside your private plugin's configuration form, and TRMNL will make requests to those URLs. For quick testing, we've prepared an endpoint that responds with `text` and `author` key/value pairs, along with a `collection` array for quick demonstration:
-
-[https://usetrmnl.com/custom\_plugin\_example\_data.json](https://usetrmnl.com/custom_plugin_example_data.json)
-
-If your desired polling URL contains a collection/array in the root node, TRMNL will nest it inside a key named "data" for accessibility by the Liquid templating engine. Here is an example of that style payload:
-
-[https://usetrmnl.com/custom\_plugin\_example\_data.json?collection\_only=true](https://usetrmnl.com/custom_plugin_example_data.json?collection_only=true)
-
-{% hint style="info" %}
-**Note**: With the Polling strategy, variables _do not_ need to be nested within a `merge_variables` node. That is only a requirement for the Webhook strategy.
-{% endhint %}
+<figure><img src="../.gitbook/assets/CleanShot 2025-05-28 at 14.33.07@2x.png" alt=""><figcaption><p>Accessing streamed webhook data</p></figcaption></figure>
 
 ## Troubleshooting
 

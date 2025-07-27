@@ -8,7 +8,7 @@
 * [Screen Templating](private-plugins/templates.md)
 * [🖼️ Plugin Templating (DEPRECATED, hidden)](private-plugins/templates-1.md)
 * [Screen Templating (Graphics)](private-plugins/templates-advanced.md)
-* [Create a screen](private-plugins/create-a-screen.md)
+* [Webhooks](private-plugins/create-a-screen.md)
 
 ***
 
