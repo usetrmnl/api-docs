@@ -37,7 +37,8 @@ On July 17, 2025 we announced a partnership with Seeed Studio.&#x20;
 
 * [Get the DIY kit](https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html)
 * [Get a BYOD license](https://shop.usetrmnl.com/products/byod) (optional)
-* [Learn more](https://wiki.seeedstudio.com/trmnl_7inch5_diy_kit_main_page/)
+* [Seeed Wiki - XIAO 7.5" panel](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/) (May 2025)
+* [Seeed Wiki - TRMNL DIY Kit](https://wiki.seeedstudio.com/trmnl_7inch5_diy_kit_main_page/) (July 2025)
 
 {% embed url="https://www.youtube.com/watch?v=MZ8HMSGqBWI" %}
 TRMNL + Seeed Studio partnership launch
