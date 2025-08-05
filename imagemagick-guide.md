@@ -47,13 +47,11 @@ output.png PNG 800x480 800x480+0+0 8-bit Grayscale Gray 2c 1607B 0.000u 0:00.000
 First create a color map:
 
 ```
-magick -size 4x1 xc:#000000 xc:#555555 xc:#aaaaaa xc:#ffffff
-+append -type Palette colormap-2bit.png
+magick -size 4x1 xc:#000000 xc:#555555 xc:#aaaaaa xc:#ffffff +append -type Palette colormap-2bit.png
 ```
 
 Then convert your image with the map:
 
 ```
-magick input.png -dither FloydSteinberg -remap colormap-2bit.png \
-       -define png:bit-depth=2 output.png
+magick input.jpeg -resize 800x480\! -dither FloydSteinberg -remap colormap-2bit.png -define png:bit-depth=2 -define png:color-type=0 output.png
 ```
