@@ -4,7 +4,7 @@ description: Control aspects of your usetrmnl.com account
 
 # Account API
 
-In addition to the [device API](fetch-screen-content.md), users who have purchased a developer license can access the account API. You can enumerate your devices, import and export plugins, control playlists, and more.
+In addition to the [device API](screens.md), users who have purchased a developer license can access the account API. You can enumerate your devices, import and export plugins, control playlists, and more.
 
 See the [**OpenAPI specification**](https://usetrmnl.com/api-docs/index.html) for complete details.
 

@@ -38,9 +38,9 @@
 ## Private API
 
 * [Introduction](private-api/introduction.md)
-* [Screens API](private-api/fetch-screen-content.md)
-* [Plugin Data API](private-api/fetch-plugin-content.md)
-* [Account API](private-api/account-api.md)
+* [Screens API](private-api/screens.md)
+* [Plugin Data API](private-api/plugin-data.md)
+* [Account API](private-api/account.md)
 * [More Endpoints](private-api/more-endpoints.md)
 
 ## Partners API
