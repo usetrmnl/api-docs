@@ -2,7 +2,7 @@
 description: Retrieve parsed plugin JSON data for your own templates.
 ---
 
-# Fetch Plugin Content
+# Plugin Data API
 
 No matter how many customizations we add to native plugins, there will always be a good reason to change them. Instead of cluttering our interface and adding complexity for other users, TRMNL offers a "data only" mode for native plugins.
 
@@ -14,29 +14,25 @@ For more context on this feature, go [here](https://usetrmnl.com/blog/calendar-h
 
 First, set up + hide an instance of the plugin you want to re-build yourself. This instructs TRMNL to sync and parse data on your behalf.
 
-1. Connect a native plugin, for example the Weather, Stock Prices, or any Calendar
-2. Note the plugin's integer ID in the URL (`/plugin_settings/<id-here>`)
-3. Navigate to Playlists and "hide" the native plugin that was automatically added by clicking the eyeball icon. **This is important** because only plugins on a live playlist will be refreshed. By hiding this native plugin, your Data Mode plugin (below) will always have fresh data.
+1. Connect a plugin, for example the Weather, Stock Prices, Calendar, etc
+2. Navigate to Playlists and "hide" the plugin (click the eyeball icon) if you don't want to see it's native version on your device. **This is important** because only plugins on a Playlist will sync fresh data.
 
 Next, build a Private Plugin.
 
-1. Navigate to Plugins > Private Plugin, select "Polling" as the Strategy
-2. Input `https://usetrmnl.com/api/plugin_settings/<id-here>/data` as the Polling URL
-3. Input `authorization=bearer <your-user-api-key>`  as the Polling Header\*
-
-\*Find or generate a [User API Key](https://help.usetrmnl.com/en/articles/11195228-user-level-api-keys) on your Account tab
-
-Click save, then enter the Markup Editor.&#x20;
+1. Navigate to Plugins > Private Plugin, select "Plugin Merge" as the Strategy
+2. Click Edit Markup
 
 <figure><img src="../.gitbook/assets/trmnl-data-mode-edit-markup.png" alt=""><figcaption><p>Private Plugin > Edit Markup</p></figcaption></figure>
 
-Parsed data will appear inside a `data` node of the "Merge Variables" dropdown. You may need to click "Force Refresh" from the private plugin settings view to ensure data has been fetched.
+Parsed data will appear inside a `<plugin_keyname>_<plugin_setting_id>` node of the "Merge Variables" dropdown. You may need to click "Force Refresh" from the private plugin settings view to ensure data has been fetched.
 
-<figure><img src="../.gitbook/assets/trmnl-merger-variables-calendar-raw-data.png" alt=""><figcaption><p>Example - Google Calendar "data mode"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/TRMNL-data-mode-example-node.png" alt=""><figcaption><p>Example - Outlook Calendar events JSON</p></figcaption></figure>
+
+Reference as many connected plugins as you'd like. When TRMNL refreshes those plugins per your [Playlist Schedule](https://help.usetrmnl.com/en/articles/11663305-playlist-scheduler), updated values will map over to your private plugin with the Plugin Merge strategy.
 
 ### Markup Quickstart
 
-If you only want to make small changes to the TRMNL native design, you can steal that markup here:
+If you only want to make small changes to the TRMNL native design, steal that markup here:
 
 * [https://github.com/usetrmnl/plugins/](https://github.com/usetrmnl/plugins/) (raw inside `lib`, let us know what else you need)
 * [https://usetrmnl.com/plugins/demo](https://usetrmnl.com/plugins/demo) (rendered output, requires login)
