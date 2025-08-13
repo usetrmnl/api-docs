@@ -12,7 +12,7 @@ For more context on this feature, go [here](https://usetrmnl.com/blog/calendar-h
 
 ### Looking for the old way?
 
-Go here to set up a Data Mode plugin the ~~old~~ [hard way](https://github.com/usetrmnl/api-docs/blob/4ce6efd395d26bfecc4d7e271ed758ebaa02283b/private-api/fetch-plugin-content.md).
+[Go here](https://github.com/usetrmnl/api-docs/blob/4ce6efd395d26bfecc4d7e271ed758ebaa02283b/private-api/fetch-plugin-content.md) to set up a Data Mode plugin the ~~old~~ hard way.
 
 ### How it works
 
