@@ -4,18 +4,22 @@ description: Retrieve parsed plugin JSON data for your own templates.
 
 # Plugin Data API
 
-No matter how many customizations we add to native plugins, there will always be a good reason to change them. Instead of cluttering our interface and adding complexity for other users, TRMNL offers a "data only" mode for native plugins.
+No matter how many customizations we add to plugins, there will always be good reasons to add more. Instead of cluttering our interface, TRMNL offers a "data only" mode.
 
 {% hint style="info" %}
 For more context on this feature, go [here](https://usetrmnl.com/blog/calendar-hackathon). For live examples, [go here](https://usetrmnl.com/blog/introducing-data-mode).
 {% endhint %}
 
+### Looking for the old way?
+
+Go here to set up a Data Mode plugin the ~~old~~ [hard way](https://github.com/usetrmnl/api-docs/blob/4ce6efd395d26bfecc4d7e271ed758ebaa02283b/private-api/fetch-plugin-content.md).
+
 ### How it works
 
-First, set up + hide an instance of the plugin you want to re-build yourself. This instructs TRMNL to sync and parse data on your behalf.
+First, set up + hide an instance of the plugin you want to modify.
 
 1. Connect a plugin, for example the Weather, Stock Prices, Calendar, etc
-2. Navigate to Playlists and "hide" the plugin (click the eyeball icon) if you don't want to see it's native version on your device. **This is important** because only plugins on a Playlist will sync fresh data.
+2. Navigate to Playlists and "hide" the plugin (click the eyeball icon), assuming you don't want to see its native form on your device. **This is important** because only plugins on a Playlist will sync fresh data.
 
 Next, build a Private Plugin.
 
