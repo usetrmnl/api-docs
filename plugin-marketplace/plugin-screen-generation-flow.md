@@ -18,7 +18,7 @@ curl -XPOST 'https://your-server.com/your-markup-url' \
 
 The `trmnl` object in this payload may or may not be useful for your plugin, but includes the user-defined instance name, device dimensions, user timezone, and so on. Here's an example, subject to change:
 
-```
+```json
 {
   "user": {
     "name": "Jim Bob",
@@ -57,7 +57,11 @@ Here's an example of a valid server response:
 
 ```json
 {
-  "markup": '<div class="view view--full"><div class="layout"><div class="columns"><div class="column"><div class="markdown gap--large"><span class="title">Daily Scripture</span><div class="content-element content content--center">Hello</div><span class="label label--underline mt-4">World</span></div></div></div></div><div>', "markup_half_horizontal": '<div class="view view--half_horizontal">Your content</div>', "markup_half_vertical": '<div class="view view--half_vertical">Your content</div>', "markup_quadrant": '<div class="view view--quadrant">Your content</div>'
+   "markup":"<div class=\"view view--full\"><div class=\"layout\"><div class=\"columns\"><div class=\"column\"><div class=\"markdown gap--large\"><span class=\"title\">Daily Scripture</span><div class=\"content-element content content--center\">Hello</div><span class=\"label label--underline mt-4\">World</span></div></div></div></div><div>",
+   "markup_half_horizontal":"<div class=\"view view--half_horizontal\">Your content</div>",
+   "markup_half_vertical":"<div class=\"view view--half_vertical\">Your content</div>",
+   "markup_quadrant":"<div class=\"view view--quadrant\">Your content</div>",
+   "shared":""
 }
 ```
 
