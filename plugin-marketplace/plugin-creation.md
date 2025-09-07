@@ -22,7 +22,7 @@ You'll have to provide the following information about your plugin.
 
 **Installation URL**: Endpoint where TRMNL should trigger the installation flow
 
-**Installation Succes Webhook URL**: Where you want to receive installation success events as a webhook
+**Installation Success Webhook URL**: Where you want to receive installation success events as a webhook
 
 **Plugin Management URL**: Where TRMNL users can manage their plugins
 
