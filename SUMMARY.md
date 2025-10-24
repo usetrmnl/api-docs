@@ -44,6 +44,7 @@
 * [More Endpoints](private-api/more-endpoints.md)
 * Public API
   * [Introduction](private-api/public-api/introduction.md)
+  * [Recipes API](private-api/public-api/recipes-api.md)
 
 ## Partners API
 
