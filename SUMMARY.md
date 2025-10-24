@@ -42,6 +42,8 @@
 * [Plugin Data API](private-api/plugin-data.md)
 * [Account API](private-api/account.md)
 * [More Endpoints](private-api/more-endpoints.md)
+* Public API
+  * [Introduction](private-api/public-api/introduction.md)
 
 ## Partners API
 
