@@ -20,10 +20,7 @@
 * [BYOD](diy/byod.md)
 * [BYOD/S](diy/byod-s.md)
 * [BYOS](diy/byos.md)
-
-***
-
-* [ImageMagick Guide](imagemagick-guide.md)
+* [ImageMagick Guide](diy/imagemagick-guide.md)
 
 ## Plugin Marketplace
 
