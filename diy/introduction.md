@@ -7,7 +7,7 @@ description: An introduction to running TRMNL on your own hardware.
 There are 4 flavors to building the perfect setup for your needs:
 
 1. **Default** - buy our device, that runs our firmware, and pings our server
-2. **BYOD** - build your own device, that runs our firmware, and pings our server
+2. **BYOD** - build your own device, that runs our firmware, and pings our server, and build custom plugins
 3. **BYOD/S** - build your own device, mod our firmware, and ping your own server
 4. **BYOS** - buy our device, mod our firmware, and ping your own server (_recommended_)
 

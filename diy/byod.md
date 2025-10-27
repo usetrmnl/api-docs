@@ -29,7 +29,7 @@ Here's what you can expect to spend per component:
 3. Create a BYOD device: [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)
 4. Visit your [device settings page](https://usetrmnl.com/devices/current/edit) to select your [Device Model](https://help.usetrmnl.com/en/articles/11547008-device-model-faq) and set your DIY device's MAC address
 5. Your DIY device will render a 6-digit ID; this is your device's Friendly ID and is already visible inside your Device settings. No action is required.
-6. Connect native apps or start building private plugins from the Plugins tab
+6. Connect native apps or **start building private plugins** from the Plugins tab; this is equivalent access as "Developer Edition" for TRMNL hardware.
 
 ### DIY Kit (Intermediate)
 
