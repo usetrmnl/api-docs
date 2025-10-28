@@ -4,7 +4,7 @@ description: Search and sort community plugins.
 
 # Recipes API
 
-#### Quickstart
+### Quickstart
 
 Execute a search at https://usetrmnl.com/recipes, then append JSON to the URL.
 
@@ -16,15 +16,34 @@ https://usetrmnl.com/recipes?search=weather&sort-by=newest
 https://usetrmnl.com/recipes.json?search=weather&sort-by=newest
 ```
 
-#### GET /recipes
+### List Recipes
 
-Provide a query with `search=xxx`, "sort-by" parameter is optional.
+<mark style="color:green;">`GET`</mark> `/recipes.json`&#x20;
 
-Example request: `https://usetrmnl.com/recipes.json?search=weather`
+This endpoint is in alpha testing and may be moved (to `/api/recipes`) or changed (to `/api/plugins`) before the end of 2025.
 
-Example response:
+**Example Request**\
+`https://usetrmnl.com/recipes.json?sort-by=install`
 
-```
+**Query Params**
+
+All are optional.
+
+<table><thead><tr><th width="194.3828125">Name</th><th width="180.94921875">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>search</code></td><td>string</td><td>Name of the plugin (partial match OK)</td></tr><tr><td><code>sort-by</code></td><td>string</td><td>Option by which to rank results</td></tr><tr><td><code>user_id</code></td><td>integer</td><td>ID of the author, e.g. 51</td></tr></tbody></table>
+
+Valid `sort-by` options:
+
+* oldest
+* newest
+* popularity
+* fork
+* install
+
+**Example Response**
+
+{% tabs %}
+{% tab title="200" %}
+```json
 {
   "data": [{
       "id": 49610,
@@ -68,16 +87,21 @@ Example response:
   "next_page_url": "/recipes?page=2&search=weather&sort_by=popularity"
 }
 ```
+{% endtab %}
+{% endtabs %}
 
-#### GET recipes/{id}
+### Get a single Recipe
 
-Fetch a single plugin by ID.&#x20;
+<mark style="color:green;">`GET`</mark> `/recipes/{id}.json`&#x20;
 
-Example request: `https://usetrmnl.com/recipes/16382.json`
+**Example Request**\
+`https://usetrmnl.com/recipes/16382.json`
 
-Example response:
+**Example Response**
 
-```
+{% tabs %}
+{% tab title="200" %}
+```json
 {
   "data": {
     "id": 16382,
@@ -112,3 +136,5 @@ Example response:
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
