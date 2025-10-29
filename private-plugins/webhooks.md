@@ -14,7 +14,7 @@ Learn how to build Private Plugins [here](https://help.usetrmnl.com/en/articles/
 
 _Request volume_
 
-You may send data to TRMNL's server up to 12x per hour. [TRMNL+](https://help.usetrmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 30x payloads per hour. Webhooks sent at a faster pace will receive a `429` rate limit response.
+You may send data to TRMNL's server up to 12x per hour. [TRMNL+](https://help.usetrmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 30x payloads per hour. Webhooks sent at a faster pace will receive a `429` rate limit response. To temporarily increase your rate limit during development, enable "Debug Logs" on your plugin settings page.
 
 _Request size_
 
