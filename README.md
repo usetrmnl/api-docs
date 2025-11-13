@@ -14,8 +14,8 @@ description: >-
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="plugin-marketplace/introduction.md" %}
-[introduction.md](plugin-marketplace/introduction.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference" %}
