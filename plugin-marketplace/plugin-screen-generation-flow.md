@@ -13,8 +13,8 @@ TRMNL generates screens by sending a POST request to the `plugin_markup_url` end
 ```bash
 curl -XPOST 'https://your-server.com/your-markup-url' \
 -H 'Authorization: Bearer xxx' \
--H 'Content-Type: application/json' \
--d '{"user_uuid": "xx", "trmnl": {}}'
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'user_uuid=xx&trmnl=<metadata-object>'
 ```
 
 The `trmnl` object in this payload may or may not be useful for your plugin, but includes the user-defined instance name, device dimensions, user timezone, and so on. Here's an example, subject to change:
