@@ -6,10 +6,9 @@ description: TRMNL's native design system for developing beautiful, e-ink friend
 
 ## Overview
 
-The TRMNL device is an **800x480 pixel, black and white, 1-bit grayscale display**.  This means we had to abandon a lot of modern web styling techniques when developing the API. Learn more about this process [here](https://usetrmnl.com/blog/design-system).
+The TRMNL OG device is an **800x480 pixel, black and white, 2-bit grayscale display**. This means we had to abandon a lot of modern web styling techniques. Learn more about this process [here](https://usetrmnl.com/blog/design-system).
 
-For the latest documentation on building beautiful plugins with TRMNL, see our Framework docs:
-
+For the latest documentation on building beautiful plugins with TRMNL, see our Framework docs:\
 [https://usetrmnl.com/framework](https://usetrmnl.com/framework)
 
 ### Quickstart (TRMNL account)
@@ -20,7 +19,7 @@ The easiest way to start building with TRMNL is by [making a Private Plugin](htt
 
 ### Quickstart (no TRMNL account)
 
-Create an HTML file with our plugins CSS + JS embedded in the `<head>`.&#x20;
+Create an HTML file with our plugins CSS + JS embedded in the `<head>`.
 
 The example below has simple markup for a "full" layout plugin. We also offer half vertical, half horizontal, and quadrant sized layouts.
 
@@ -73,7 +72,7 @@ Note: in some cases you may need to include the 'Inter' font (inside the `<head>
 
 Use our [Framework Docs](https://usetrmnl.com/framework) to enhance your design and show/hide logic (example: [overflow management](https://usetrmnl.com/framework/overflow), [number formatting](https://usetrmnl.com/framework/format_value)).
 
-When you're satisfied with the design, replace dynamic content with `{{ variable }}` references. TRMNL uses the [Liquid templating library](https://shopify.github.io/liquid/) by Shopify to interpolate values into your template markup. You can then save&#x20;
+When you're satisfied with the design, replace dynamic content with `{{ variable }}` references. TRMNL uses the [Liquid templating library](https://shopify.github.io/liquid/) by Shopify to interpolate values into your template markup. You can then save
 
 {% hint style="info" %}
 [Tutorial - How to create a custom plugin](https://help.usetrmnl.com/en/articles/9510536-custom-plugins)
