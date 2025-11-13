@@ -6,7 +6,6 @@
 ## Private Plugins
 
 * [Screen Templating](private-plugins/templates.md)
-* [🖼️ Plugin Templating (DEPRECATED, hidden)](private-plugins/templates-1.md)
 * [Screen Templating (Graphics)](private-plugins/templates-advanced.md)
 * [Webhooks](private-plugins/webhooks.md)
 

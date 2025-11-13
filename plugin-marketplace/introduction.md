@@ -4,7 +4,7 @@ description: TRMNL's public marketplace lets any user publish or use another use
 
 # Introduction
 
-Our plugin marketplace allows developers to create their own public plugins for other users to install. In the future, the plugin marketplace will enable developers to earn money per install, similar to the Shopify App Marketplace or Google Play Store.
+Our plugin marketplace is where developers can make plugins for other users to install. Beginning November 2025, [TRMNL pays developers](https://usetrmnl.com/blog/creator-fund) for their work.
 
 There are 2 approaches to publishing a plugin for other users — Public, or Recipe. Review the differences between them before continuing:
 

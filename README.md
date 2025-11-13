@@ -10,20 +10,12 @@ description: >-
 [how-it-works.md](how-it-works.md)
 {% endcontent-ref %}
 
-{% content-ref url="private-plugins/templates.md" %}
-[templates.md](private-plugins/templates.md)
-{% endcontent-ref %}
-
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="plugin-marketplace/introduction.md" %}
+[introduction.md](plugin-marketplace/introduction.md)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference" %}
