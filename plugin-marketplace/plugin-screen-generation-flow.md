@@ -13,7 +13,8 @@ TRMNL generates screens by sending a POST request to the `plugin_markup_url` end
 ```bash
 curl -XPOST 'https://your-server.com/your-markup-url' \
 -H 'Authorization: Bearer xxx' \
--d 'user_uuid=xx&trmnl=<metadata-object>'
+-H 'Content-Type: application/json' \
+-d '{"user_uuid": "xx", "trmnl": {}}'
 ```
 
 The `trmnl` object in this payload may or may not be useful for your plugin, but includes the user-defined instance name, device dimensions, user timezone, and so on. Here's an example, subject to change:
@@ -51,7 +52,7 @@ Your web server should respond with HTML inside root nodes named `markup`, `mark
 **Pro tip**: use the [Private Plugin](https://usetrmnl.com/plugin_settings/new?keyname=private_plugin) markup editor to develop the frontend of your plugin. This in-browser text editor supports live refresh and automatically applies the correct styling and JavaScript helpers to your markup.
 {% endhint %}
 
-TRMNL uses the markup in your server's response to generate an e-ink friendly image. If the user connecting your plugin created a "full screen" playlist item, TRMNL will leverage the HTML inside the `markup` node. If they connected your plugin as part of a left/right Mashup, TRMNL will look for HTML inside the `markup_half_vertical` node.&#x20;
+TRMNL uses the markup in your server's response to generate an e-ink friendly image. If the user connecting your plugin created a "full screen" playlist item, TRMNL will leverage the HTML inside the `markup` node. If they connected your plugin as part of a left/right Mashup, TRMNL will look for HTML inside the `markup_half_vertical` node.
 
 Here's an example of a valid server response:
 
