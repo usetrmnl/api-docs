@@ -27,13 +27,13 @@ Here's what you can expect to spend per component:
 1. Build a device and [flash our firmware](https://github.com/usetrmnl/trmnl-firmware)
 2. [Buy access](https://shop.usetrmnl.com/products/byod) to the TRMNL web app + API
 3. Create a BYOD device: [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)
-4. Visit your [device settings page](https://usetrmnl.com/devices/current/edit) to select your [Device Model](https://help.usetrmnl.com/en/articles/11547008-device-model-faq) and set your DIY device's MAC address
+4. Visit your [device settings page](https://usetrmnl.com/devices/current/edit) to select your [Device Model](https://help.usetrmnl.com/en/articles/11547008-device-model-faq) and then, under the [Developer Perks](https://usetrmnl.com/devices/current/developer/edit) section set your DIY device's MAC address
 5. Your DIY device will render a 6-digit ID; this is your device's Friendly ID and is already visible inside your Device settings. No action is required.
 6. Connect native apps or **start building private plugins** from the Plugins tab; this is equivalent access as "Developer Edition" for TRMNL hardware.
 
 ### DIY Kit (Intermediate)
 
-On July 17, 2025 we announced a partnership with Seeed Studio.&#x20;
+On July 17, 2025 we announced a partnership with Seeed Studio.
 
 * [Get the DIY kit](https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html)
 * [Get a BYOD license](https://shop.usetrmnl.com/products/byod) (optional)
