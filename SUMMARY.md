@@ -43,6 +43,7 @@
 
 * [Introduction](public-api/introduction.md)
 * [Recipes API](public-api/recipes-api.md)
+* [Categories API](public-api/categories-api.md)
 
 ## Partners API
 
