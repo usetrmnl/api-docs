@@ -4,8 +4,6 @@ description: OAuth installation flow between TRMNL and your web server.
 
 # Plugin Installation Flow
 
-
-
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 1. **Installation Request**
@@ -16,7 +14,7 @@ When the user installs your plugin, TRMNL sends an installation request to `inst
 
 After receiving the request, Your server using the `client_id`, `client_secret` and `token` from step#1 request the `access_token` from TRMNL using the following endpoint:
 
-```
+```bash
 body = {
   code: 'code-from-step-1',
   client_id: 'your-plugin-client-id',
@@ -31,23 +29,23 @@ response['access_token']
 
 TRMNL responds with the `access_token`.
 
-4. **Installation Callback**&#x20;
+4. **Installation Callback**
 
 Use the `installation_callback_url` from Step #1 and redirect the user back to TRMNL.
 
-5. **Success Webhook**&#x20;
+5. **Success Webhook**
 
-After the user has successfully finished installing the plugin, TRMNL sends a success notification to `installation_success_webhook_url` endpoint. Data is sent in JSON format as follows.
+After the user has successfully finished installing the plugin, TRMNL sends a POST success notification to `installation_success_webhook_url` endpoint. Data is sent in JSON format as follows.
 
 HTTP Headers:
 
-```
-{ 'Authorization': 'Bearer <access_token>', 'Content-Type': 'application/json' }
+```bash
+{'Authorization': 'Bearer <access_token>', 'Content-Type': 'application/json'}
 ```
 
 Body:
 
-```
+```json
 {
   "user": {
     "name":"Ronak J",
