@@ -7,7 +7,7 @@ description: Creating a plugin OAuth client.
 You can create a new plugin by visiting the following URL:
 
 ```
-https://usetrmnl.com/plugins/my/new
+https://trmnl.com/plugins/my/new
 ```
 
 <figure><img src="../.gitbook/assets/trmnl-plugin-form.png" alt="" width="375"><figcaption><p>TRMNL public plugin client</p></figcaption></figure>

@@ -4,7 +4,7 @@ description: Buy a TRMNL device, then point it at your own server.
 
 # BYOS
 
-First,  purchase a TRMNL from our [store](https://usetrmnl.com). Then choose a BYOS implementation for your stack. Our flagship implementation is Terminus (Hanami), so we recommended you get started there. But you can also choose from other languages/frameworks.
+First,  purchase a TRMNL from our [store](https://trmnl.com). Then choose a BYOS implementation for your stack. Our flagship implementation is Terminus (Hanami), so we recommended you get started there. But you can also choose from other languages/frameworks.
 
 **Why BYOS?**
 

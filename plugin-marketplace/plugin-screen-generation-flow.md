@@ -49,7 +49,7 @@ The `trmnl` object in this payload may or may not be useful for your plugin, but
 Your web server should respond with HTML inside root nodes named `markup`, `markup_quadrant`, and so on to satisfy each layout offered by TRMNL. This markup should include whatever values you want the user to see rendered on their screen.
 
 {% hint style="success" %}
-**Pro tip**: use the [Private Plugin](https://usetrmnl.com/plugin_settings/new?keyname=private_plugin) markup editor to develop the frontend of your plugin. This in-browser text editor supports live refresh and automatically applies the correct styling and JavaScript helpers to your markup.
+**Pro tip**: use the [Private Plugin](https://trmnl.com/plugin_settings/new?keyname=private_plugin) markup editor to develop the frontend of your plugin. This in-browser text editor supports live refresh and automatically applies the correct styling and JavaScript helpers to your markup.
 {% endhint %}
 
 TRMNL uses the markup in your server's response to generate an e-ink friendly image. If the user connecting your plugin created a "full screen" playlist item, TRMNL will leverage the HTML inside the `markup` node. If they connected your plugin as part of a left/right Mashup, TRMNL will look for HTML inside the `markup_half_vertical` node.
@@ -66,4 +66,4 @@ Here's an example of a valid server response:
 }
 ```
 
-**Note:** in order for your plugin to be published in the TRMNL public marketplace, you must provide HTML for all available markup layouts. [View them here](https://help.usetrmnl.com/en/articles/10168132-mashups).
+**Note:** in order for your plugin to be published in the TRMNL public marketplace, you must provide HTML for all available markup layouts. [View them here](https://help.trmnl.com/en/articles/10168132-mashups).
