@@ -10,7 +10,7 @@ The TRMNL **web server** hosts a growing directory of [first-party plugins](http
 
 The TRMNL **device** is a custom PCB featuring an ESP32-C3 microcontroller, 1800-2500 mAh battery, and 7.5" EPD screen housed in injection-molded ABS soft touch plastic. Customers may disassemble their device, mod their firmware, and retrieve their API keys without impacting our [Terms of Service](https://trmnl.com/terms).
 
-TRMNL **firmware** supports automatic OTA (over the air) updates to WiFi-connected devices and is [open source](https://github.com/trmnl/firmware). Here's how it works:
+TRMNL **firmware** supports automatic OTA (over the air) updates to WiFi-connected devices and is [open source](https://github.com/usetrmnl/firmware). Here's how it works:
 
 1. TRMNL device wakes up and requests content from web server every _n_ period\*
 2. TRMNL web server generates a 1- or 2-bit PNG image. Response JSON includes a link to this image and timing instructions for the next "refresh" request.
