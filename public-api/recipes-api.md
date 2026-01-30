@@ -6,14 +6,14 @@ description: Search and sort community plugins.
 
 ### Quickstart
 
-Execute a search at https://usetrmnl.com/recipes, then append JSON to the URL.
+Execute a search at https://trmnl.com/recipes, then append JSON to the URL.
 
 ```
 # search for "weather"
-https://usetrmnl.com/recipes?search=weather&sort-by=newest
+https://trmnl.com/recipes?search=weather&sort-by=newest
 
 # in JSON format
-https://usetrmnl.com/recipes.json?search=weather&sort-by=newest
+https://trmnl.com/recipes.json?search=weather&sort-by=newest
 ```
 
 ### List Recipes
@@ -23,7 +23,7 @@ https://usetrmnl.com/recipes.json?search=weather&sort-by=newest
 This endpoint is in alpha testing and may be moved (to `/api/recipes`) or changed (to `/api/plugins`) before the end of 2025.
 
 **Example Request**\
-`https://usetrmnl.com/recipes.json?sort-by=install`
+`https://trmnl.com/recipes.json?sort-by=install`
 
 **Query Params**
 
@@ -96,7 +96,7 @@ Valid `sort-by` options:
 <mark style="color:green;">`GET`</mark> `/recipes/{id}.json`
 
 **Example Request**\
-`https://usetrmnl.com/recipes/16382.json`
+`https://trmnl.com/recipes/16382.json`
 
 **Example Response**
 

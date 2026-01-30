@@ -20,7 +20,7 @@ The TRMNL web server generates PNG images. When a device pings our [Display API]
 }
 ```
 
-For several ready-made OSS server implementations, see [BYOS Implementations](https://docs.usetrmnl.com/go/diy/byos#implementations). To develop your own server that is TRMNL firmware compatible out of the box:
+For several ready-made OSS server implementations, see [BYOS Implementations](https://docs.trmnl.com/go/diy/byos#implementations). To develop your own server that is TRMNL firmware compatible out of the box:
 
 1. [build a device](byod.md)
 2. change the base URL to your own server or local network from the WiFi Captive Portal

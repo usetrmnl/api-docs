@@ -7,18 +7,18 @@ description: Send a payload of merge variables to create a custom screen.
 {% hint style="info" %}
 #### Before you begin
 
-Learn how to build Private Plugins [here](https://help.usetrmnl.com/en/articles/9510536-private-plugins). The guide below only explains how to use the "Webhook" data retrieval strategy.
+Learn how to build Private Plugins [here](https://help.trmnl.com/en/articles/9510536-private-plugins). The guide below only explains how to use the "Webhook" data retrieval strategy.
 {% endhint %}
 
 ### Rate Limits
 
 _Request volume_
 
-You may send data to TRMNL's server up to 12x per hour. [TRMNL+](https://help.usetrmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 30x payloads per hour. Webhooks sent at a faster pace will receive a `429` rate limit response. To temporarily increase your rate limit during development, enable "Debug Logs" on your plugin settings page.
+You may send data to TRMNL's server up to 12x per hour. [TRMNL+](https://help.trmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 30x payloads per hour. Webhooks sent at a faster pace will receive a `429` rate limit response. To temporarily increase your rate limit during development, enable "Debug Logs" on your plugin settings page.
 
 _Request size_
 
-You may send up to 2kb of data. [TRMNL+](https://help.usetrmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 5kb of data. To stay within these boundaries while also creating a data rich experience, consider using the `deep_merge` and `stream` strategies documented below.
+You may send up to 2kb of data. [TRMNL+](https://help.trmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 5kb of data. To stay within these boundaries while also creating a data rich experience, consider using the `deep_merge` and `stream` strategies documented below.
 
 ### Authorization
 
@@ -37,7 +37,7 @@ This is accessible from your plugin instance's configuration form > Webhook URL 
 Send a `POST` request to your Webhook URL. Put data inside a `merge_variables` node like so:
 
 ```
-curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234" \
+curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
   -H "Content-Type: application/json" \
   -d '{"merge_variables": {"text":"You can do it!", "author": "Rob Schneider"}}' \
   -X POST
@@ -52,7 +52,7 @@ You will see this payload inside the Your Variables dropdown of the Markup Edito
 To fetch existing `merge_variables` from a private plugin, `GET` from the same endpoint:
 
 ```
-curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234"
+curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234"
 ```
 
 ### Update existing content
@@ -66,7 +66,7 @@ There are two strategies to accomplish this: `deep_merge`, and `stream`.
 The `deep_merge` strategy combines existing key/value pairs with the new values incoming on the webhook. It's a good way to update nested data with only a few values here and there.
 
 ```
-curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234" \
+curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
   -H "Content-Type: application/json" \
   -d '{"merge_variables": {"sensor": {"temperature": 42}}, "merge_strategy": "deep_merge"}' \
   -X POST
@@ -77,7 +77,7 @@ curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234" \
 The `stream` strategy is useful for accumulating values in arrays. Any top-level arrays are appended with the incoming values, and the `stream_limit` parameter ensures that old values drop off the arrays so they don't grow forever.
 
 ```
-curl "https://usetrmnl.com/api/custom_plugins/asdfqwerty1234" \
+curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
   -H "Content-Type: application/json" \
   -d '{"merge_variables": {"temperatures": [40, 42]}, "merge_strategy": "stream", "stream_limit": 10}' \
   -X POST
@@ -89,4 +89,4 @@ Now you may iterate through the combined data inside your markup, for example:
 
 ## Troubleshooting
 
-For more help, see our [Private Plugin guide](https://help.usetrmnl.com/en/articles/9510536-custom-plugins) or join the developer Discord from your account tab.
+For more help, see our [Private Plugin guide](https://help.trmnl.com/en/articles/9510536-custom-plugins) or join the developer Discord from your account tab.

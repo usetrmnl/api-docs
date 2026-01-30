@@ -4,7 +4,7 @@ description: Publish your plugin for all users with a simple submission flow.
 
 # Going Live
 
-After building and testing your plugin, copy/paste the following application into an email to team@usetrmnl.com.
+After building and testing your plugin, copy/paste the following application into an email to team@trmnl.com.
 
 Subject:&#x20;
 
@@ -29,7 +29,7 @@ Video demonstration:
 {{ link to video, no audio required, of the plugin being installed from scratch. }}
 
 How can we test this plugin works?
-{{ preferably a demo login email/password that we can own forever, ex "team@usetrmnl.com" }}
+{{ preferably a demo login email/password that we can own forever, ex "team@trmnl.com" }}
 
 Will you promote TRMNL when this plugin is published? If so, how/where?
 {{ no wrong answers, but we prioritize plugins that help us grow }}

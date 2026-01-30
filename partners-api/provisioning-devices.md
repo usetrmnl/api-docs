@@ -35,7 +35,7 @@ If a quota is preferred, for example 50x maximum provisions per month, this endp
 
 **Step 2 - TRMNL generates a coupon**
 
-Provide the `code`from Step 1 to your customer with instructions to purchase a device from usetrmnl.com. They can provide this code at checkout.
+Provide the `code`from Step 1 to your customer with instructions to purchase a device from trmnl.com. They can provide this code at checkout.
 
 If your discount is for 100% off, they will not be charged. If your code is for 50% off, they will pay 50% at checkout. You will be billed via invoice later for claimed discount codes during the agreed period. Additional terms are possible, for example requiring customers to pay for shipping, or only subsidizing a device with our regular (vs large size) battery, etc.
 
@@ -45,4 +45,4 @@ Prior to this workflow being implemented, TRMNL should have already tested your 
 
 Whatever key/values are provided in the `data`  node of Step 1 will be saved to the user's pre-loaded plugin when their device is unboxed and set up. Thus these key/values should match exactly the merge variables required by the plugin setting instance.
 
-Contact [partners@usetrmnl.com](mailto:partners@usetrmnl.com) with questions or requests.
+Contact [partners@trmnl.com](mailto:partners@trmnl.com) with questions or requests.

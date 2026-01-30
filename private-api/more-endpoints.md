@@ -6,4 +6,4 @@ description: Additional options to customize your setup.
 
 To interact with Devices, Playlists, Plugin Settings, and other resources, see our Swagger docs:
 
-[https://usetrmnl.com/api-docs/](https://usetrmnl.com/api-docs/index.html)
+[https://trmnl.com/api-docs/](https://trmnl.com/api-docs/index.html)

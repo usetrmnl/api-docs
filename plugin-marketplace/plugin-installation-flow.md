@@ -21,7 +21,7 @@ body = {
   client_secret: 'your-plugin-secret',
   grant_type: 'authorization_code'
 }
-response = HTTParty.post("https://usetrmnl.com/oauth/token", body: body)
+response = HTTParty.post("https://trmnl.com/oauth/token", body: body)
 response['access_token']
 ```
 
@@ -49,7 +49,7 @@ Body:
 {
   "user": {
     "name":"Ronak J",
-    "email":"ronak@usetrmnl.com",
+    "email":"ronak@trmnl.com",
     "first_name":"Ronak",
     "last_name":"J",
     "locale":"en",
@@ -65,4 +65,4 @@ Body:
 Time zone mappings are available here under "Constants:"\
 [https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html](https://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html)
 
-The `plugin_setting_id`is useful for building a redirect URI in your own application, for example to send a user back to usetrmnl.com/plugin\_settings/:plugin\_setting\_id/edit.
+The `plugin_setting_id`is useful for building a redirect URI in your own application, for example to send a user back to trmnl.com/plugin\_settings/:plugin\_setting\_id/edit.

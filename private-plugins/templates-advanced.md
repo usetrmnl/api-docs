@@ -6,9 +6,9 @@ description: Go deeper with custom screen styling, data visualization, and more.
 
 ## Overview
 
-The TRMNL design system is actively improving to suit the needs of our [growing plugin directory](https://usetrmnl.com/integrations) and requests from developers like you.
+The TRMNL design system is actively improving to suit the needs of our [growing plugin directory](https://trmnl.com/integrations) and requests from developers like you.
 
-As we extend [native components](https://usetrmnl.com/framework), you are welcome to provide in-line styling to plugin markup to achieve your desired effect.
+As we extend [native components](https://trmnl.com/framework), you are welcome to provide in-line styling to plugin markup to achieve your desired effect.
 
 You may also included 3rd party libraries, for example [Highcharts](https://www.highcharts.com/), to create data visualizations like charts and graphs.
 
@@ -50,7 +50,7 @@ Highcharts.chart("container", {
 </script>
 ```
 
-If this is saved into a [Private Plugin](https://usetrmnl.com/plugin_settings?keyname=private_plugin) > Markup field, the following screen will be rendered:
+If this is saved into a [Private Plugin](https://trmnl.com/plugin_settings?keyname=private_plugin) > Markup field, the following screen will be rendered:
 
 <figure><img src="../.gitbook/assets/chart-example.bmp" alt=""><figcaption><p>Un-styled chart example</p></figcaption></figure>
 
@@ -61,8 +61,8 @@ Here's another line chart with TRMNL-friendly styling:
 <figure><img src="../.gitbook/assets/trmnl-line-chart-example.png" alt=""><figcaption><p>Styled line chart example</p></figcaption></figure>
 
 Get all the code + learn how to do this here:\
-[https://usetrmnl.com/framework/chart](https://usetrmnl.com/framework/chart)
+[https://trmnl.com/framework/chart](https://trmnl.com/framework/chart)
 
 ## More Charts and Graphs
 
-Our [Framework docs](https://usetrmnl.com/framework) are the best place for the latest examples and tips to improve the look and feel of graphical embeds from 3rd party tools like Highcharts.
+Our [Framework docs](https://trmnl.com/framework) are the best place for the latest examples and tips to improve the look and feel of graphical embeds from 3rd party tools like Highcharts.

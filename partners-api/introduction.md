@@ -12,4 +12,4 @@ Example scenario:
 2. Acme wants to gift a free TRMNL device to their top customers. Acme creates coupon codes with the TRMNL Partners API that their customer can use at checkout for X% off their order.
 3. When Acme's customer device is shipped, it is associated to their account on Acme's platform. Upon unboxing + WiFi pairing, Acme's customer will see their Acme native dashboard on TRMNL device without any additional setup.
 
-Continue reading to learn how this works with just a single API request, or email [partners@usetrmnl.com](mailto:partners@usetrmnl.com) to get started.
+Continue reading to learn how this works with just a single API request, or email [partners@trmnl.com](mailto:partners@trmnl.com) to get started.

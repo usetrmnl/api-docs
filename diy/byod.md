@@ -20,14 +20,14 @@ Here's what you can expect to spend per component:
 **OSS approach**
 
 1. Build a device and [flash our firmware](https://github.com/usetrmnl/trmnl-firmware)
-2. Spin up a [BYOS server client](https://docs.usetrmnl.com/go/diy/byos#implementations)
+2. Spin up a [BYOS server client](https://docs.trmnl.com/go/diy/byos#implementations)
 
 **OSS + closed source approach**
 
 1. Build a device and [flash our firmware](https://github.com/usetrmnl/trmnl-firmware)
-2. [Buy access](https://shop.usetrmnl.com/products/byod) to the TRMNL web app + API
-3. Create a BYOD device: [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)
-4. Visit your [device settings page](https://usetrmnl.com/devices/current/edit) to select your [Device Model](https://help.usetrmnl.com/en/articles/11547008-device-model-faq) and then, under the [Developer Perks](https://usetrmnl.com/devices/current/developer/edit) section set your DIY device's MAC address
+2. [Buy access](https://shop.trmnl.com/products/byod) to the TRMNL web app + API
+3. Create a BYOD device: [https://trmnl.com/claim-a-device](https://trmnl.com/claim-a-device)
+4. Visit your [device settings page](https://trmnl.com/devices/current/edit) to select your [Device Model](https://help.trmnl.com/en/articles/11547008-device-model-faq) and then, under the [Developer Perks](https://trmnl.com/devices/current/developer/edit) section set your DIY device's MAC address
 5. Your DIY device will render a 6-digit ID; this is your device's Friendly ID and is already visible inside your Device settings. No action is required.
 6. Connect native apps or **start building private plugins** from the Plugins tab; this is equivalent access as "Developer Edition" for TRMNL hardware.
 
@@ -36,7 +36,7 @@ Here's what you can expect to spend per component:
 On July 17, 2025 we announced a partnership with Seeed Studio.
 
 * [Get the DIY kit](https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html)
-* [Get a BYOD license](https://shop.usetrmnl.com/products/byod) (optional)
+* [Get a BYOD license](https://shop.trmnl.com/products/byod) (optional)
 * [Seeed Wiki - XIAO 7.5" panel](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/) (May 2025)
 * [Seeed Wiki - TRMNL DIY Kit](https://wiki.seeedstudio.com/trmnl_7inch5_diy_kit_main_page/) (July 2025)
 
@@ -56,4 +56,4 @@ Seeed Studio XIAO Esp32-C3 board
 
 ### Need Help?
 
-Send us a live chat or join the Developer-only Discord, accessible from your [Account](https://usetrmnl.com/account) tab.
+Send us a live chat or join the Developer-only Discord, accessible from your [Account](https://trmnl.com/account) tab.
