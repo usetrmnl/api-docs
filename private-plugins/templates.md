@@ -23,6 +23,8 @@ Create an HTML file with our plugins CSS + JS embedded in the `<head>`.
 
 The example below has simple markup for a "full" layout plugin. We also offer half vertical, half horizontal, and quadrant sized layouts.
 
+**NOTE:** This code includes `view` classes that are specific to public plugin development, _**not**_ to be used within TRMNL editor.
+
 ```erb
 <!DOCTYPE html>
 <html>
