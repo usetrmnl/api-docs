@@ -29,7 +29,7 @@ This endpoint is in alpha testing and may be moved (to `/api/recipes`) or change
 
 All are optional.
 
-<table><thead><tr><th width="194.3828125">Name</th><th width="180.94921875">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>search</code></td><td>string</td><td>Name of the plugin (partial match OK)</td></tr><tr><td><code>sort-by</code></td><td>string</td><td>Option by which to rank results</td></tr><tr><td><code>user_id</code></td><td>integer</td><td>ID of the author, e.g. 51</td></tr></tbody></table>
+<table><thead><tr><th width="194.3828125">Name</th><th width="180.94921875">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>search</code></td><td>string</td><td>Name of the plugin (partial match OK)</td></tr><tr><td><code>sort-by</code></td><td>string</td><td>Option by which to rank results</td></tr><tr><td><code>user_id</code></td><td>integer</td><td>ID of the author, e.g. 51</td></tr><tr><td><code>per_page</code></td><td>integer</td><td>Results count (maximum 100, default 25)</td></tr></tbody></table>
 
 Valid `sort-by` options:
 
@@ -47,6 +47,7 @@ Valid `sort-by` options:
 {
   "data": [{
       "id": 49610,
+      "user_id": 1158,
       "name": "Weather Chum",
       "published_at": "2025-05-14T05:32:00.000Z",
       "icon_url": "https://trmnl-public.s3.us-east-2.amazonaws.com/ajjlbek4cabcvhk3s1lxggn8cgon",
@@ -106,6 +107,7 @@ Valid `sort-by` options:
 {
   "data": {
     "id": 16382,
+    "user_id": 934,
     "name": "Matrix",
     "published_at":"2025-02-10T11:33:00.000Z",
     "icon_url": "https://trmnl-public.s3.us-east-2.amazonaws.com/mtpxyr22spnwjheeh5kv1p7tpk6n",
