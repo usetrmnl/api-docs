@@ -21,7 +21,6 @@ Use this legend to understand the matrix of features below.
 * 🟢 Supported.
 * 🟡 Partially supported.
 * 🔴 Not supported or not implemented.
-* ⚫️ Archived with minimal maintenance support.
 * ⚪️ Unknown.
 
 **Matrix**
