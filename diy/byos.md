@@ -2,13 +2,20 @@
 description: Buy a TRMNL device, then point it at your own server.
 ---
 
-# BYOS
+# BYOS (Build Your Own Server)
 
-First, purchase a TRMNL from our [store](https://trmnl.com). Then choose a BYOS implementation for your stack. Our flagship implementation is Terminus (Hanami), so we recommended you get started there. But you can also choose from other languages/frameworks.
+### Why
 
-**Why BYOS?**
+TRMNL intends to ensure that **every device is un-brickable and can run with zero external dependencies**. BYOS is one aspect of making this possible for you.
 
-TRMNL intends to ensure that **every device is un-brickable and can run with zero external dependencies**.
+### Quick Start
+
+1. Purchase a TRMNL from our [store](https://trmnl.com).
+2. Choose a BYOS implementation for your stack (see below). Our flagship implementation is [Terminus](https://github.com/usetrmnl/byos_hanami), so we recommended you get started there.
+
+### Audience
+
+This page is primarily for BYOS maintainers but might also be helpful for anyone wanting to get a highly level over of what each implementation can do before spinning up on your own network.
 
 ### Implementations
 
@@ -27,7 +34,7 @@ Use this legend to understand the matrix of features below.
 
 Below is a list of all implementations in various languages/frameworks you can use to self-host and manage your devices with:
 
-<table><thead><tr><th width="150.58984375">Implementation</th><th>Stack</th><th width="121.6953125">Dashboard</th><th width="172.37109375">Auto-Provisioning</th><th width="111.859375">Devices</th><th>JSON Data API</th><th>Image Previews</th><th>Playlists</th><th>Plugins</th><th>Recipes</th><th>Docker</th><th>Test Suite</th><th>Maintained</th><th>Semantic Versioning</th></tr></thead><tbody><tr><td><a href="https://github.com/usetrmnl/byos_hanami"><strong>Terminus</strong></a></td><td>Ruby/Hanami</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_laravel"><strong>BYOS Laravel</strong></a></td><td>PHP/Laravel</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td></tr><tr><td><a href="https://github.com/usetrmnl/inker"><strong>Inker</strong></a></td><td>JavaScript</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_next"><strong>BYOS Next.js</strong></a></td><td>JavaScript/Next.js</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_fastapi"><strong>BYOS Fast API</strong></a></td><td>Python/FastAPI</td><td>🟢</td><td>⚪️</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>⚪️</td><td>🔴</td><td>🔴</td><td>⚪️</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_django"><strong>BYOS Django</strong></a></td><td>Python/Django</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_phoenix"><strong>BYOS Phoenix</strong></a></td><td>Elixir/Phoenix</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>⚪️</td></tr></tbody></table>
+<table><thead><tr><th width="150.58984375">Implementation</th><th>Stack</th><th width="121.6953125">Dashboard</th><th width="172.37109375">Auto-Provisioning</th><th width="111.859375">Devices</th><th>JSON Data API</th><th>Image Previews</th><th>Playlists</th><th>Plugins</th><th>Recipes</th><th>Sensors</th><th>Docker</th><th>Test Suite</th><th>Maintained</th><th>Semantic Versioning</th></tr></thead><tbody><tr><td><a href="https://github.com/usetrmnl/byos_hanami"><strong>Terminus</strong></a></td><td>Ruby/Hanami</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_laravel"><strong>BYOS Laravel</strong></a></td><td>PHP/Laravel</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td></tr><tr><td><a href="https://github.com/usetrmnl/inker"><strong>Inker</strong></a></td><td>JavaScript</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_next"><strong>BYOS Next.js</strong></a></td><td>JavaScript/Next.js</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_fastapi"><strong>BYOS Fast API</strong></a></td><td>Python/FastAPI</td><td>🟢</td><td>⚪️</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>⚪️</td><td>🔴</td><td>🔴</td><td>🔴</td><td>⚪️</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_django"><strong>BYOS Django</strong></a></td><td>Python/Django</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_phoenix"><strong>BYOS Phoenix</strong></a></td><td>Elixir/Phoenix</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>⚪️</td></tr></tbody></table>
 
 The following provides a detailed breakdown of each of the above features:
 
@@ -39,6 +46,7 @@ The following provides a detailed breakdown of each of the above features:
 * **Playlists**: Supports playlist configuration and management in terms of timing, order, and display of screens on devices. This can also include proxying to our Core server.
 * **Plugins**: Supports installation and hosting of custom plugins. This can also include proxying to our Core server.
 * **Recipes**: Supports installation and hosting of custom plugins. This can also include proxying to our Core server.
+* **Sensors**: Supports sensors connected via [Qwiic Cables](https://www.sparkfun.com/flexible-qwiic-cable-50mm.html) either to the server (via Raspberry Pi) or via a TRMNL compatible device. Please see the [TRMNL Sensor Scanner](https://github.com/usetrmnl/sensor_scanner) project for further details.
 * **Docker**: Supports Docker for both local development and production deployment.
 * **Test Suite**: Has a test suite with near 100% test coverage, is fully runnable locally, and is wired up with automatic Continuous Integration (CI) builds.
 * **Maintained**: Project is maintained and kept up-to-date on a weekly (or monthly) basis in terms of dependencies, firmware updates, and keeping up-to-date with any/all Core changes.

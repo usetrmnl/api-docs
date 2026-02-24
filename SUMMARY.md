@@ -18,7 +18,7 @@
 * [Introduction](diy/introduction.md)
 * [BYOD](diy/byod.md)
 * [BYOD/S](diy/byod-s.md)
-* [BYOS](diy/byos.md)
+* [BYOS (Build Your Own Server)](diy/byos.md)
 * [ImageMagick Guide](diy/imagemagick-guide.md)
 
 ## Plugin Marketplace
