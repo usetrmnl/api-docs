@@ -11,7 +11,7 @@ TRMNL intends to ensure that **every device is un-brickable and can run with zer
 ### Quick Start
 
 1. Purchase a TRMNL from our [store](https://trmnl.com).
-2. Choose a BYOS implementation for your stack (see below). Our flagship implementation is [Terminus](https://github.com/usetrmnl/byos_hanami), so we recommended you get started there.
+2. Choose a BYOS implementation for your stack (see below). Our flagship implementation is [Terminus](https://github.com/usetrmnl/terminus), so we recommended you get started there.
 
 ### Audience
 
