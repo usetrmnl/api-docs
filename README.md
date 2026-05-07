@@ -1,6 +1,6 @@
 ---
 description: >-
-  Welcome to TRMNL. Here you can learn how to build plugins, connect your own
+  Welcome to TRMNL. Here you can learn to build plugins, connect your own
   hardware, and more.
 ---
 
