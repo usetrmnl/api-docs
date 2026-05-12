@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 440" role="img"
+     aria-label="Classic cron-driven screen generation — a five-step flow"
+     font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">
+  <title>Classic, cron-driven screen generation</title>
+  <desc>A scheduled tick wakes a worker, which grabs the due plugins, fetches fresh data, decides whether to render or skip each screen, and on a render writes a new image to the screen and uploads it to S3; the device pulls that image on its next check-in.</desc>
+  <defs>
+    <marker id="aw" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,1 L11,6 L0,11 z" fill="#3c7d63"/></marker>
+    <marker id="ad" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0,1 L11,6 L0,11 z" fill="#27493a"/></marker>
+    <marker id="am" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,1 L11,6 L0,11 z" fill="#9a948a"/></marker>
+  </defs>
+
+  <rect width="1360" height="440" fill="#f7f5ef"/>
+
+  <!-- main connectors (block right edges 272,540,808,1076; centers y=124) -->
+  <path d="M272,124 H288" stroke="#3c7d63" stroke-width="3.6" fill="none" stroke-linecap="round" marker-end="url(#aw)"/>
+  <path d="M540,124 H556" stroke="#3c7d63" stroke-width="3.6" fill="none" stroke-linecap="round" marker-end="url(#aw)"/>
+  <path d="M808,124 H824" stroke="#3c7d63" stroke-width="3.6" fill="none" stroke-linecap="round" marker-end="url(#aw)"/>
+  <path d="M1076,124 H1092" stroke="#27493a" stroke-width="4" fill="none" stroke-linecap="round" marker-end="url(#ad)"/>
+
+  <!-- skip offshoot from the DECIDE block (4) -->
+  <path d="M950,190 V232" stroke="#9a948a" stroke-width="2.8" fill="none" stroke-linecap="round" marker-end="url(#am)"/>
+  <rect x="836" y="232" width="228" height="66" rx="14" fill="#efece4" stroke="#9a948a" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="950" y="259" font-size="12" font-weight="700" fill="#7a7466" text-anchor="middle">skip ↩  no new image</text>
+  <text x="950" y="279" font-size="10.5" fill="#8a8478" text-anchor="middle">data unchanged · device asleep · …</text>
+
+  <!-- block 1: trigger / neutral -->
+  <rect x="20" y="58" width="252" height="132" rx="18" fill="#ece8de" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="146" y="86" font-size="10" fill="#7a7466" text-anchor="middle" letter-spacing="1.4">ON A SCHEDULE</text>
+  <text x="146" y="111" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Scheduled tick</text>
+  <text x="146" y="134" font-size="11.5" fill="#6a6a6a" text-anchor="middle">a background worker</text>
+  <text x="146" y="151" font-size="11.5" fill="#6a6a6a" text-anchor="middle">wakes up</text>
+
+  <!-- block 2: claim / work -->
+  <rect x="288" y="58" width="252" height="132" rx="18" fill="#e1ebe7" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="414" y="86" font-size="10" fill="#3c7d63" text-anchor="middle" letter-spacing="1.4">CLAIM</text>
+  <text x="414" y="111" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Grab the due plugins</text>
+  <text x="414" y="134" font-size="11.5" fill="#6a6a6a" text-anchor="middle">the ones whose refresh</text>
+  <text x="414" y="151" font-size="11.5" fill="#6a6a6a" text-anchor="middle">time has passed</text>
+
+  <!-- block 3: fetch / work -->
+  <rect x="556" y="58" width="252" height="132" rx="18" fill="#e1ebe7" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="682" y="86" font-size="10" fill="#3c7d63" text-anchor="middle" letter-spacing="1.4">PER PLUGIN</text>
+  <text x="682" y="111" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Fetch fresh data</text>
+  <text x="682" y="134" font-size="11.5" fill="#6a6a6a" text-anchor="middle">re-pull from the API,</text>
+  <text x="682" y="151" font-size="11.5" fill="#6a6a6a" text-anchor="middle">feed, or user config</text>
+
+  <!-- block 4: decide / work (skip offshoot hangs off this one) -->
+  <rect x="824" y="58" width="252" height="132" rx="18" fill="#e1ebe7" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="950" y="86" font-size="10" fill="#3c7d63" text-anchor="middle" letter-spacing="1.4">DECIDE</text>
+  <text x="950" y="111" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">Render this screen —</text>
+  <text x="950" y="130" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle">or skip?</text>
+  <text x="950" y="153" font-size="11.5" fill="#6a6a6a" text-anchor="middle">device awake? data changed?</text>
+
+  <!-- block 5: render → store / solid sage (the output) -->
+  <rect x="1092" y="58" width="252" height="132" rx="18" fill="#27493a" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="1218" y="86" font-size="10" fill="#a5c3b7" text-anchor="middle" letter-spacing="1.4">RENDER → STORE</text>
+  <text x="1218" y="111" font-size="14" font-weight="700" fill="#fffdf6" text-anchor="middle">New image on the screen</text>
+  <text x="1218" y="134" font-size="11.5" fill="#a5c3b7" text-anchor="middle">screenshot → ePaper PNG</text>
+  <text x="1218" y="151" font-size="11.5" fill="#a5c3b7" text-anchor="middle">→ uploaded to S3</text>
+
+  <!-- device anchor (dashed) -->
+  <rect x="36" y="222" width="148" height="106" rx="14" fill="#f7f5ef" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="5 4"/>
+  <rect x="50" y="234" width="120" height="60" rx="4" fill="#ece8de"/>
+  <line x1="110" y1="294" x2="110" y2="306" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="110" y="320" font-size="11.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">TRMNL device</text>
+
+  <!-- dotted loop: output block (5) back to the device anchor.
+       Drawn last so the arrowhead sits on top of the blocks it passes near. -->
+  <path d="M1218,190 C1218,300 1218,360 1218,386 C1218,412 1100,414 980,414 L240,414 C150,414 110,412 110,360 C110,348 110,338 110,330"
+        stroke="#27493a" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-dasharray="4 4" marker-end="url(#ad)"/>
+  <text x="668" y="360" font-size="10.5" fill="#699b87" text-anchor="middle" letter-spacing="1">the device pulls the new image on its next check-in</text>
+</svg>
