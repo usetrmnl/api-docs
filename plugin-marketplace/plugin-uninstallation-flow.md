@@ -10,8 +10,9 @@ When a user uninstalls your plugin, as a best practice TRMNL will send a notific
 
 HTTP Headers:
 
-```bash
-{'Authorization': 'Bearer <access_token>', 'Content-Type': 'application/json'}
+```
+Authorization: Bearer <access_token>
+Content-Type: application/json
 ```
 
 Body:

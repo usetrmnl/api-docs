@@ -6,41 +6,60 @@ description: OAuth installation flow between TRMNL and your web server.
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
+Third Party plugins use a simplified OAuth2 flow. There is no `client_id` or `client_secret` to manage — TRMNL identifies your plugin by the URLs you registered during [Plugin Creation](plugin-creation.md), and each installation is authorized by a single-use `code`.
+
 1. **Installation Request**
 
-When the user installs your plugin, TRMNL sends an installation request to `installation_url` with unique `token` and `installation_callback_url`.
+When a user installs your plugin, TRMNL redirects their browser to your `installation_url`. This is a `GET` request, so both parameters arrive in the query string (URL-encoded):
+
+* `code` — a single-use installation code, unique to this user + plugin
+* `installation_callback_url` — the TRMNL URL you send the user back to once installation is complete (see Step 4)
+
+```bash
+GET 'https://your-server.com/your-installation-url?code=abc123&installation_callback_url=https%3A%2F%2Ftrmnl.com%2Fplugin_settings%2Fnew%3Fkeyname%3Dyour_plugin%26code%3Dabc123'
+```
 
 2. **Fetch Access Token**
 
-After receiving the request, Your server using the `client_id`, `client_secret` and `token` from step#1 request the `access_token` from TRMNL using the following endpoint:
+Exchange the `code` from Step 1 for an `access_token` by sending a `POST` request to TRMNL's token endpoint. The `code` is the only parameter required, sent as a form-encoded body:
 
 ```bash
-body = {
-  code: 'code-from-step-1',
-  client_id: 'your-plugin-client-id',
-  client_secret: 'your-plugin-secret',
-  grant_type: 'authorization_code'
-}
-response = HTTParty.post("https://trmnl.com/oauth/token", body: body)
-response['access_token']
+curl -XPOST 'https://trmnl.com/oauth/token' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'code=abc123'
 ```
 
 3. **Access Token**
 
-TRMNL responds with the `access_token`.
+TRMNL responds with a JSON body containing the `access_token`. Persist this token — you'll use it as the Bearer token to authenticate the [screen generation](plugin-screen-generation-flow.md) requests TRMNL sends to your server.
+
+```json
+{ "access_token": "a1b2c3d4e5f6..." }
+```
+
+If the `code` is missing or invalid, TRMNL responds with an error body instead (note: the HTTP status is still `200`):
+
+```json
+{ "error": true, "message": "invalid code" }
+```
 
 4. **Installation Callback**
 
-Use the `installation_callback_url` from Step #1 and redirect the user back to TRMNL.
+Redirect the user's browser to the `installation_callback_url` you received in Step 1. This `GET` redirect returns them to TRMNL to finish connecting the plugin.
+
+```bash
+GET '<installation_callback_url>'
+```
 
 5. **Success Webhook**
 
-After the user has successfully finished installing the plugin, TRMNL sends a POST success notification to `installation_success_webhook_url` endpoint. Data is sent in JSON format as follows.
+Once the user has finished installing the plugin, TRMNL sends a `POST` request to your `installation_success_webhook_url`. The request is authenticated with the user's `access_token` and the body is JSON.
 
 HTTP Headers:
 
-```bash
-{'Authorization': 'Bearer <access_token>', 'Content-Type': 'application/json'}
+```
+Authorization: Bearer <access_token>
+Content-Type: application/json
 ```
 
 Body:
@@ -48,6 +67,7 @@ Body:
 ```json
 {
   "user": {
+    "id":5678,
     "name":"Ronak J",
     "email":"ronak@trmnl.com",
     "first_name":"Ronak",
