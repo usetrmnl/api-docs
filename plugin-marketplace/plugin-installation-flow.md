@@ -4,7 +4,7 @@ description: OAuth installation flow between TRMNL and your web server.
 
 # Plugin Installation Flow
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/plugin-installation-flow.svg" alt="Plugin installation flow between TRMNL and your web server"><figcaption></figcaption></figure>
 
 Third Party plugins use a simplified OAuth2 flow. There is no `client_id` or `client_secret` to manage — TRMNL identifies your plugin by the URLs you registered during [Plugin Creation](plugin-creation.md), and each installation is authorized by a single-use `code`.
 

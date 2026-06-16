@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="722" height="478" viewBox="0 0 722 478" role="img" aria-labelledby="title desc">
+  <title id="title">Plugin Installation Flow</title>
+  <desc id="desc">Flow diagram between TRMNL and Your Web server showing five installation steps.</desc>
+  <defs>
+    <style><![CDATA[
+      .box-white { fill: #fff; stroke: #fff; stroke-width: 6; stroke-linejoin: round; }
+      .box-black { fill: none; stroke: #000; stroke-width: 2; stroke-linejoin: round; }
+      .line-white { fill: none; stroke: #fff; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+      .line-black { fill: none; stroke: #000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .dotted-white { fill: none; stroke: #fff; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1 9; }
+      .dotted-black { fill: none; stroke: #000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1 9; }
+      .text-outline { fill: none; stroke: #fff; stroke-width: 3; stroke-linejoin: round; }
+      .text-fill { fill: #000; stroke: none; }
+      .font { font-family: Arial, Helvetica, sans-serif; }
+      .title { font-size: 16px; font-weight: 600; text-anchor: middle; }
+      .box-label { font-size: 16px; font-weight: 400; text-anchor: middle; dominant-baseline: middle; }
+      .step { font-size: 15px; font-weight: 600; }
+      .mono { font-family: "Courier New", Courier, monospace; font-size: 15px; font-weight: 700; }
+      .arrow-white { fill: #fff; stroke: #fff; stroke-width: 4; stroke-linejoin: round; }
+      .arrow-black { fill: #000; stroke: #000; stroke-width: 1; stroke-linejoin: round; }
+    ]]></style>
+  </defs>
+
+  <!-- Title -->
+  <text class="text-outline font title" x="361" y="82">Plugin Installation Flow</text>
+  <text class="text-fill font title" x="361" y="82">Plugin Installation Flow</text>
+
+  <!-- Boxes -->
+  <rect class="box-white" x="54" y="161" width="184" height="194"/>
+  <rect class="box-black" x="54" y="161" width="184" height="194"/>
+
+  <rect class="box-white" x="500" y="156" width="164" height="202"/>
+  <rect class="box-black" x="500" y="156" width="164" height="202"/>
+
+  <text class="text-outline font box-label" x="146" y="249">TRMNL</text>
+  <text class="text-fill font box-label" x="146" y="249">TRMNL</text>
+  <text class="text-outline font box-label" x="582" y="251">Your Web server</text>
+  <text class="text-fill font box-label" x="582" y="251">Your Web server</text>
+
+  <!-- 1. Installation Request -->
+  <line class="line-white" x1="239" y1="188" x2="491" y2="188"/>
+  <polygon class="arrow-white" points="500,188 480,180 480,196"/>
+  <line class="line-black" x1="239" y1="188" x2="491" y2="188"/>
+  <polygon class="arrow-black" points="500,188 480,180 480,196"/>
+  <text class="text-outline font step" x="271" y="180">1. Installation Request</text>
+  <text class="text-fill font step" x="271" y="180">1. Installation Request</text>
+
+  <!-- 2. Fetch access_token -->
+  <line class="dotted-white" x1="499" y1="222" x2="247" y2="222"/>
+  <polygon class="arrow-white" points="238,222 258,214 258,230"/>
+  <line class="dotted-black" x1="499" y1="222" x2="247" y2="222"/>
+  <polygon class="arrow-black" points="238,222 258,214 258,230"/>
+  <text class="text-outline mono" x="271" y="212">2. Fetch access_token</text>
+  <text class="text-fill mono" x="271" y="212">2. Fetch access_token</text>
+
+  <!-- 3. return access_token -->
+  <line class="dotted-white" x1="239" y1="263" x2="491" y2="263"/>
+  <polygon class="arrow-white" points="500,263 480,255 480,271"/>
+  <line class="dotted-black" x1="239" y1="263" x2="491" y2="263"/>
+  <polygon class="arrow-black" points="500,263 480,255 480,271"/>
+  <text class="text-outline mono" x="271" y="256">3. return access_token</text>
+  <text class="text-fill mono" x="271" y="256">3. return access_token</text>
+
+  <!-- 4. Installation Callback -->
+  <line class="line-white" x1="499" y1="300" x2="247" y2="300"/>
+  <polygon class="arrow-white" points="238,300 258,292 258,308"/>
+  <line class="line-black" x1="499" y1="300" x2="247" y2="300"/>
+  <polygon class="arrow-black" points="238,300 258,292 258,308"/>
+  <text class="text-outline font step" x="269" y="293">4. Installation Callback</text>
+  <text class="text-fill font step" x="269" y="293">4. Installation Callback</text>
+
+  <!-- 5. Success Webhook -->
+  <line class="line-white" x1="239" y1="343" x2="491" y2="343"/>
+  <polygon class="arrow-white" points="500,343 480,335 480,351"/>
+  <line class="line-black" x1="239" y1="343" x2="491" y2="343"/>
+  <polygon class="arrow-black" points="500,343 480,335 480,351"/>
+  <text class="text-outline font step" x="271" y="336">5. Success Webhook</text>
+  <text class="text-fill font step" x="271" y="336">5. Success Webhook</text>
+</svg>
