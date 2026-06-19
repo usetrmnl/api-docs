@@ -59,7 +59,7 @@ At a minimum, the following API endpoints should be supported for all BYOS imple
 #### Setup
 
 ```shell
-curl "https://byos.local/api/setup" \
+curl "http://byos.local/api/setup" \
     -H 'ID: <device_mac_address>' \
     -H 'Content-Type: application/json'
 ```
@@ -81,3 +81,7 @@ curl "http://byos.local/api/log" \
 ```
 
 💡 For a detailed breakdown of all API endpoints and what they can do, please refer to the [Terminus API Documentation](https://github.com/usetrmnl/byos_hanami?tab=readme-ov-file#apis) or the [TRMNL API](https://github.com/usetrmnl/trmnl-api) gem which provides a Ruby API client for talking to our servers.
+
+### Securing With HTTPS
+
+Most BYOS implementations serve up content over plain HTTP. If you prefer TLS connections, you can put a reverse proxy in front of the server. Caddy is a popular option. You can use self-signed certificates, or real ones from Let's Encrypt. See [this community issue](https://github.com/usetrmnl/trmnl-firmware/issues/58#issue-2826999580) for details on how to set it up yourself.
