@@ -72,6 +72,10 @@ curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
   -X POST
 ```
 
+{% hint style="info" %}
+**Note**: when using this strategy, [#rate-limits](webhooks.md#rate-limits "mention") (namely request size) still apply. New data will be merged with existing data and that payload must not exceed the maximum size.
+{% endhint %}
+
 #### Stream strategy
 
 The `stream` strategy is useful for accumulating values in arrays. Any top-level arrays are appended with the incoming values, and the `stream_limit` parameter ensures that old values drop off the arrays so they don't grow forever.
