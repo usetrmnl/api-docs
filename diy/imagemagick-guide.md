@@ -49,10 +49,22 @@ output.png PNG 800x480 800x480+0+0 8-bit Grayscale Gray 2c 1607B 0.000u 0:00.000
 **This feature is experimental** and designed for OG model devices running [FW 1.6.0+](https://trmnl.com/flash) with grayscale + fast refresh support. After creating an image, upload it to a public or private/local network and point to it with an [Alias plugin](https://help.trmnl.com/en/articles/10701448-alias-plugin) instance.
 
 ```
+ magick input.png -monochrome -colors 2 -alpha off -depth 1 -define png:compression-level=9 -strip png:output.png
+```
+
+Dithering an image
+
+```
 magick input.png -resize 800x480\! -colorspace Gray -dither FloydSteinberg -posterize 4 -alpha off -depth 2 -define png:compression-level=9 -strip png:output.png
 ```
 
 ## Generating a PNG image (4 bit) <a href="#h_6b95d41fbd" id="h_6b95d41fbd"></a>
+
+```
+magick input.png -colorspace Gray -dither None -posterize 16 -alpha off -depth 4 -define png:compression-level=9 -strip png:output.png
+```
+
+Dithering an image
 
 ```
 magick input.png -colorspace Gray -dither FloydSteinberg -posterize 16 -alpha off -depth 4 -define png:compression-level=9 -strip png:output.png
