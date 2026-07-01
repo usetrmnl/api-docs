@@ -55,7 +55,7 @@ output.png PNG 800x480 800x480+0+0 8-bit Grayscale Gray 2c 1607B 0.000u 0:00.000
 Dithering an image
 
 ```
-magick input.png -resize 800x480\! -colorspace Gray -dither FloydSteinberg -posterize 4 -alpha off -depth 2 -define png:compression-level=9 -strip png:output.png
+magick input.png -colorspace Gray -dither FloydSteinberg -posterize 4 -alpha off -depth 2 -define png:compression-level=9 -strip png:output.png
 ```
 
 ## Generating a PNG image (4 bit) <a href="#h_6b95d41fbd" id="h_6b95d41fbd"></a>
