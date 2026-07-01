@@ -48,14 +48,12 @@ output.png PNG 800x480 800x480+0+0 8-bit Grayscale Gray 2c 1607B 0.000u 0:00.000
 
 **This feature is experimental** and designed for OG model devices running [FW 1.6.0+](https://trmnl.com/flash) with grayscale + fast refresh support. After creating an image, upload it to a public or private/local network and point to it with an [Alias plugin](https://help.trmnl.com/en/articles/10701448-alias-plugin) instance.
 
-First create a color map:
-
 ```
-magick -size 4x1 xc:#000000 xc:#555555 xc:#aaaaaa xc:#ffffff +append -type Palette colormap-2bit.png
+magick input.png -resize 800x480\! -colorspace Gray -dither FloydSteinberg -posterize 4 -alpha off -depth 2 -define png:compression-level=9 -strip png:output.png
 ```
 
-Then convert your image with the map:
+## Generating a PNG image (4 bit) <a href="#h_6b95d41fbd" id="h_6b95d41fbd"></a>
 
 ```
-magick input.jpeg -resize 800x480\! -dither FloydSteinberg -remap colormap-2bit.png -define png:bit-depth=2 -define png:color-type=0 output.png
+magick input.png -colorspace Gray -dither FloydSteinberg -posterize 16 -alpha off -depth 4 -define png:compression-level=9 -strip png:output.png
 ```
