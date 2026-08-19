@@ -13,7 +13,7 @@ Our [native devices](https://shop.trmnl.com/collections/devices) feature custom 
 TRMNL **firmware** supports automatic OTA (over the air) updates to WiFi-connected devices and is [open source](https://github.com/usetrmnl/firmware). Here's how it works:
 
 1. Device wakes up and requests content from web server every _n_ period\*
-2. Web server generates a 1- or 2-bit PNG image. Response JSON includes a link to this image and timing instructions for the next "refresh" request.
+2. Web server generates a PNG image. Response JSON includes a link to this image and timing instructions for the next "refresh" request.
 3. Device renders the content, then goes to sleep for the instructed amount of time.
 
 {% hint style="info" %}
