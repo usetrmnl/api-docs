@@ -44,15 +44,23 @@ On July 17, 2025 we announced a partnership with Seeed Studio.
 TRMNL + Seeed Studio partnership launch
 {% endembed %}
 
-If you're a Seeed Studio early adopter (XIAO esp32-c3 board), check out the community guides below for in-depth setup assistance. You can also leverage the [Seeed Wiki guide to TRMNL](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/).
+If you're a Seeed Studio early adopter (XIAO esp32-c3 board based XIAO 7.5'' ePaper Panel), check out the community guides below for in-depth setup assistance. You can also leverage the [Seeed Wiki guide to TRMNL](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl/).
 
 {% embed url="https://www.youtube.com/watch?v=Tr__8OlQQms" %}
 E-Paper Dashboard without coding | Xiao E-Paper Display and TRMNL Firmware
 {% endembed %}
-
 {% embed url="https://www.youtube.com/watch?v=QAGTRrbQSBE" %}
 Seeed Studio XIAO Esp32-C3 board
 {% endembed %}
+
+### Finished ePaper Devices (Elementary)
+Our partner Seeed Studio also offers a seires of ePaper devices with metal casing, that also runs [TRMNL BYOD License](https://shop.trmnl.com/products/byod).
+*[reTerminal Sticky, 3.97'' Monochrome ePaper Display 800x480](https://www.seeedstudio.com/reTerminal-Sticky-p-6861.html?utm_source=partner&utm_medium=TRMNL&utm_campaign=byod)
+*[reTerminal E1001,7.5'' Monochrome ePaper Display 800x480](https://www.seeedstudio.com/reTerminal-E1001-p-6534.html?utm_source=partner&utm_medium=TRMNL&utm_campaign=byod)
+*[reTerminal E1002,7.3'' Full-Color ePaper Display 800x480](https://www.seeedstudio.com/reTerminal-E1002-p-6533.html?utm_source=partner&utm_medium=TRMNL&utm_campaign=byod)
+*[reTerminal E1003,10.3'' Monochrome ePaper Display 1872x1404](https://www.seeedstudio.com/reTerminal-E1003-p-6731.html?utm_source=partner&utm_medium=TRMNL&utm_campaign=byod)
+*[reTerminal E1004, 13.3'' Full Color ePaper Frame 1600x1200](https://www.seeedstudio.com/reTerminal-E1004-p-6692.html?utm_source=partner&utm_medium=TRMNL&utm_campaign=byod)
+
 
 ### Need Help?
 
