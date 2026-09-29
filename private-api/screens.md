@@ -43,7 +43,7 @@ These attributes impact the response content by instructing the device to either
 If you're expanding a TRMNL fleet with BYOD devices, such as a [Raspberry Pi](https://trmnl.com/blog/rpi-trmnl) or [Kindle](https://trmnl.com/guides/turn-your-amazon-kindle-into-a-trmnl), [Android](https://github.com/usetrmnl/trmnl-android), or [Kobo](https://github.com/usetrmnl/trmnl-kobo) tablet, you may prefer to mirror whatever content is showing on your official TRMNL or BYOD device.
 
 ```
-curl https://trmnl.com/api/current_screen --header "access-token:xxxxxx"
+curl https://trmnl.com/api/display/current --header "access-token:xxxxxx"
 ```
 
 This will respond with the following fields:
@@ -58,5 +58,5 @@ This will respond with the following fields:
 ```
 
 {% hint style="info" %}
-**Note**: the `current_screen` endpoint was designed for consumption by our [Chrome extension](https://trmnl.com/chrome). Please don't abuse it.
+**Note**: the `display/current` endpoint (formerly `current_screen`, which still redirects here) was designed for consumption by our [Chrome extension](https://trmnl.com/chrome). Please don't abuse it.
 {% endhint %}
