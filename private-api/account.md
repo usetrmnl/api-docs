@@ -10,6 +10,13 @@ See the [**OpenAPI specification**](https://trmnl.com/api-docs) for complete det
 
 We have also open-sourced an official [**trmnl-api**](https://github.com/usetrmnl/trmnl-api) Ruby gem for API clients.
 
+Prefer the command line? The [**TRMNL CLI**](https://github.com/usetrmnl/cli) turns every endpoint into a command. It signs in through your browser, or set `TRMNL_API_KEY` to your account API key for scripts and CI.
+
+```
+brew install usetrmnl/tap/trmnl
+trmnl list-devices
+```
+
 {% hint style="info" %}
 These endpoints are being continually improved upon as we discover new use-cases, so please send us feedback with your API feature requests.
 {% endhint %}

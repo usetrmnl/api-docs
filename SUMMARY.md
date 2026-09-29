@@ -34,6 +34,7 @@
 * [Display API](private-api/screens.md)
 * [Plugin Data API](private-api/plugin-data.md)
 * [Account API](private-api/account.md)
+* [CLI](private-api/cli.md)
 * [More Endpoints](private-api/more-endpoints.md)
 
 ## Public API
