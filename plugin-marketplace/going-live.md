@@ -4,7 +4,13 @@ description: Publish your plugin for all users with a simple submission flow.
 
 # Going Live
 
-After building and testing your plugin, copy/paste the following application into an email to team@trmnl.com.
+After building and testing your plugin, visit [My Plugins](https://trmnl.com/plugins/my) and click **Submit for Review** on your plugin's card. This moves its status from `development` to `in_review` and opens a ticket with our team.
+
+{% hint style="info" %}
+Publishing isn't available during a BYOD free trial. Purchase a license first.
+{% endhint %}
+
+Then copy/paste the following application into an email to team@trmnl.com, so we have what we need to test it.
 
 Subject:&#x20;
 

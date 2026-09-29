@@ -11,11 +11,11 @@ TRMNL intends to ensure that **every device is un-brickable and can run with zer
 ### Quick Start
 
 1. Purchase a TRMNL from our [store](https://trmnl.com).
-2. Choose a BYOS implementation for your stack (see below). Our flagship implementation is [Terminus](https://github.com/usetrmnl/terminus), so we recommended you get started there.
+2. Choose a BYOS implementation for your stack (see below). Our flagship implementation is [Terminus](https://github.com/usetrmnl/terminus), so we recommend you get started there.
 
 ### Audience
 
-This page is primarily for BYOS maintainers but might also be helpful for anyone wanting to get a highly level over of what each implementation can do before spinning up on your own network.
+This page is primarily for BYOS maintainers but might also be helpful for anyone wanting to get a high level overview of what each implementation can do before spinning up on your own network.
 
 ### Implementations
 
@@ -54,33 +54,68 @@ The following provides a detailed breakdown of each of the above features:
 
 ### API
 
-At a minimum, the following API endpoints should be supported for all BYOS implementations:
+At a minimum, the following API endpoints should be supported for all BYOS implementations. The headers below are the ones our firmware sends.
 
 #### Setup
+
+The device calls this once, after WiFi setup, to trade its MAC address for an API key.
 
 ```shell
 curl "http://byos.local/api/setup" \
     -H 'ID: <device_mac_address>' \
+    -H 'FW-Version: 1.8.16' \
+    -H 'Model: og' \
     -H 'Content-Type: application/json'
+```
+
+The firmware reads `status`, `api_key`, `friendly_id`, `image_url` + `message`, and stores `api_key` for every request after this one. Any `status` other than `200` counts as a failed setup.
+
+Example response:
+
+```json
+{
+  "status": 200,
+  "api_key": "<device_api_key>",
+  "friendly_id": "ABC123",
+  "image_url": "http://byos.local/images/setup-logo.bmp",
+  "message": "Register at byos.local with Device ID 'ABC123'"
+}
 ```
 
 #### Display
 
+The device calls this on every wake. It also sends battery, WiFi + screen details as headers (`Battery-Voltage`, `RSSI`, `Width`, `Height`, `Refresh-Rate` and more); see [Screens](../private-api/screens.md) for the full list.
+
 ```bash
 curl "http://byos.local/api/display" \
      -H 'ID: <device_mac_address>' \
+     -H 'Access-Token: <device_api_key>' \
+     -H 'FW-Version: 1.8.16' \
      -H 'Content-Type: application/json'
 ```
+
+The firmware reads these fields:
+
+* `status` -- `0` draws `image_url`; `202` means "not registered yet" and the device polls again in a few seconds
+* `image_url` + `filename` -- `filename` is a cache key, so the device only downloads `image_url` when `filename` changes
+* `refresh_rate` -- seconds to sleep before the next request
+* `reset_firmware` -- `true` makes the device erase its WiFi credentials + API key
+* `update_firmware` + `firmware_url` -- `true` + a `.bin` URL triggers an OTA update
+* `special_function` -- what a button press does (e.g. `identify`, `sleep`, `rewind`)
 
 #### Logs
 
+When something goes wrong (a failed download, a bad image), the device posts its logs here:
+
 ```bash
-curl "http://byos.local/api/log" \
+curl -X POST "http://byos.local/api/log" \
      -H 'ID: <device_mac_address>' \
-     -H 'Content-Type: application/json'
+     -H 'Access-Token: <device_api_key>' \
+     -H 'Content-Type: application/json' \
+     -d '{"logs": [{"message": "..."}]}'
 ```
 
-💡 For a detailed breakdown of all API endpoints and what they can do, please refer to the [Terminus API Documentation](https://github.com/usetrmnl/byos_hanami?tab=readme-ov-file#apis) or the [TRMNL API](https://github.com/usetrmnl/trmnl-api) gem which provides a Ruby API client for talking to our servers.
+💡 For a detailed breakdown of all API endpoints and what they can do, please refer to the [Terminus API Documentation](https://github.com/usetrmnl/terminus?tab=readme-ov-file#api) or the [TRMNL API](https://github.com/usetrmnl/trmnl-api) gem which provides a Ruby API client for talking to our servers.
 
 ### Securing With HTTPS
 

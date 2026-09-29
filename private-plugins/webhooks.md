@@ -14,11 +14,13 @@ Learn how to build Private Plugins [here](https://help.trmnl.com/en/articles/951
 
 _Request volume_
 
-You may send data to TRMNL's server up to 12x per hour. [TRMNL+](https://help.trmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 30x payloads per hour. Webhooks sent at a faster pace will receive a `429` rate limit response. To temporarily increase your rate limit during development, enable "Debug Logs" on your plugin settings page.
+You may send data to TRMNL's server up to 12x per hour. [TRMNL+](https://help.trmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 30x payloads per hour. Webhooks sent at a faster pace will receive a `429` rate limit response. To temporarily increase your rate limit during development, enable "Debug Logs" on your plugin settings page -- this unlocks the TRMNL+ limit for 24 hours.
 
 _Request size_
 
-You may send up to 2kb of data. [TRMNL+](https://help.trmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 5kb of data. To stay within these boundaries while also creating a data rich experience, consider using the `deep_merge` and `stream` strategies documented below.
+You may send up to 5kb of data. [TRMNL+](https://help.trmnl.com/en/articles/11861887-trmnl-faq) subscribers may send up to 10kb of data. Larger payloads receive a `422` response with the size we measured. To stay within these boundaries while also creating a data rich experience, consider using the `deep_merge` and `stream` strategies documented below.
+
+Need to send something bigger, like a raw API response you only use a slice of? Attach a [Serverless](https://help.trmnl.com/en/articles/14130649-serverless) transform script in the Markup Editor. Webhooks with a transform accept up to 1mb, and the transformed result must fit the limits above.
 
 ### Authorization
 
@@ -29,7 +31,7 @@ This is accessible from your plugin instance's configuration form > Webhook URL 
 <figure><img src="../.gitbook/assets/TRMNL Private Plugin Webhook URL w UUID.png" alt=""><figcaption><p>Private Plugin Webhook URL w/ UUID</p></figcaption></figure>
 
 {% hint style="info" %}
-**Note:** you must "save" (create) a private plugin instance to generate a UUID and Webhook URL.
+**Note:** you must "save" (create) a private plugin instance to generate a UUID and Webhook URL. The plugin's Strategy must be set to "Webhook", and the account must own a device with [Developer edition](https://help.trmnl.com/en/articles/12410549-developer-edition-features) enabled -- otherwise we respond with `403`.
 {% endhint %}
 
 ### Set new content
@@ -43,9 +45,19 @@ curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
   -X POST
 ```
 
+We respond with JSON: `200` + the stored `merge_variables` on success, or `422` + a `message` explaining what was wrong (wrong strategy, payload too large, `merge_variables` not an object, unknown `merge_strategy`).
+
 You will see this payload inside the Your Variables dropdown of the Markup Editor.
 
 <figure><img src="../.gitbook/assets/TRMNL - Your Variables dropdown.png" alt=""><figcaption><p>Your variables - available inside the Markup Editor</p></figcaption></figure>
+
+New data doesn't always render the instant it arrives. If your plugin hasn't refreshed in the last 15 minutes and no refresh is already queued, we render right away. Otherwise the new values show up on the next scheduled refresh.
+
+**Tip:** send `"TRMNL_SKIP_DISPLAY": true` inside `merge_variables` to store the data without drawing a new screen, and to skip this plugin in your playlist until a later payload drops the flag.
+
+#### MessagePack
+
+Prefer a binary format? Send [MessagePack](https://msgpack.org) instead of JSON. Set `Content-Type: application/msgpack` and encode the same object (a map with string keys, e.g. `{"merge_variables": {...}}`). Size limits are measured on the stored JSON, so MessagePack saves bytes on the wire but not against your quota.
 
 ### Get merge variable content
 
@@ -55,6 +67,8 @@ To fetch existing `merge_variables` from a private plugin, `GET` from the same e
 curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234"
 ```
 
+The response looks like `{"status": 200, "merge_variables": {...}}`.
+
 ### Update existing content
 
 If your private plugin needs to maintain state over time, for example an ever-growing todo list or a data visualization, you may prefer to send only "new" data points to your TRMNL plugin.
@@ -63,7 +77,7 @@ There are two strategies to accomplish this: `deep_merge`, and `stream`.
 
 #### Deep merge strategy
 
-The `deep_merge` strategy combines existing key/value pairs with the new values incoming on the webhook. It's a good way to update nested data with only a few values here and there.
+The `deep_merge` strategy combines existing key/value pairs with the new values incoming on the webhook. It's a good way to update nested data with only a few values here and there. Arrays are replaced, not combined -- use `stream` for that.
 
 ```
 curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
@@ -78,7 +92,9 @@ curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
 
 #### Stream strategy
 
-The `stream` strategy is useful for accumulating values in arrays. Any top-level arrays are appended with the incoming values, and the `stream_limit` parameter ensures that old values drop off the arrays so they don't grow forever.
+The `stream` strategy is useful for accumulating values in arrays. Any top-level arrays are appended with the incoming values, and the `stream_limit` parameter ensures that old values drop off the arrays so they don't grow forever. Without `stream_limit`, arrays keep growing until the payload hits your size limit.
+
+**Every payload replaces the rest of your data.** Only the arrays you send again get appended to; any key you leave out of the next payload is gone, arrays included. Send every key, every time.
 
 ```
 curl "https://trmnl.com/api/custom_plugins/asdfqwerty1234" \
