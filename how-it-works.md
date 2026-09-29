@@ -10,14 +10,14 @@ The TRMNL **web server** hosts a growing directory of [first-party plugins](http
 
 Our [native devices](https://shop.trmnl.com/collections/devices) feature custom PCBs powered by ESP32 controllers ranging from C3 Mini to S3 and C5, 1800-6000 mAh LiPo batteries, and 7.5" - 10.3"+ EPD screens housed in injection-molded PC or ABS soft touch plastic. Customers may disassemble their device and mod their firmware without impacting our [Terms of Service](https://trmnl.com/terms).
 
-TRMNL **firmware** supports automatic OTA (over the air) updates to WiFi-connected devices and is [open source](https://github.com/usetrmnl/firmware). Here's how it works:
+TRMNL **firmware** supports automatic OTA (over the air) updates to WiFi-connected devices and is [open source](https://github.com/usetrmnl/trmnl-firmware). Here's how it works:
 
 1. Device wakes up and requests content from web server every _n_ period\*
-2. Web server generates a PNG image. Response JSON includes a link to this image and timing instructions for the next "refresh" request.
+2. Web server responds with the latest pre-rendered image for that device (PNG for most models). Response JSON includes a link to this image and timing instructions for the next "refresh" request.
 3. Device renders the content, then goes to sleep for the instructed amount of time.
 
 {% hint style="info" %}
-\* "Displayable content" is the most recently created screen, in order of priority according to the [Playlists](https://help.trmnl.com/en/articles/11663305-playlist-scheduler) interface. "N" is a value in minutes, configurable by customers at a per-plugin or per-device level.
+\* "N" is the device's refresh rate, anywhere from 5 minutes to 24 hours, and each item in a [Playlist](https://help.trmnl.com/en/articles/11663305-playlist-scheduler) can override it. Plugins fetch new data + re-render on their own refresh interval, so the device always gets the most recently created screen for whichever playlist item is up next.
 {% endhint %}
 
 ## Opinionated device <> server relationship
@@ -26,11 +26,11 @@ Most IoT products support SSH-ing directly into peripheral devices. We've heard 
 
 **Your TRMNL device pings our server, never the other way around**.
 
-Each request to our `/api/display` endpoint ([docs](https://docs.trmnl.com/go/private-api/screens)) includes only the minimum details needed to support customers -- an API key, device mac address, firmware version, battery voltage, and WiFi signal strength.
+Each request to our `/api/display` endpoint ([docs](https://docs.trmnl.com/go/private-api/screens)) includes only the details needed to render the right screen + support customers -- an API key, device MAC address, firmware version, model, screen width + height, refresh rate, battery voltage + charging status, and WiFi signal strength.
 
-**We do not collect any footprint of your location or identity**, such as IP address or WiFi credentials. Your local network's SSID and password are stored only on your TRMNL device.
+**We do not collect your location or WiFi credentials.** Your local network's SSID and password are stored only on your TRMNL device. Like any web server we see your device's IP address when it checks in. We keep it for 7 days in our request logs, plus a short window while our support team is debugging your device.
 
-When the TRMNL web server responds to a device's request we include only a few fields. These include `update_firmware` (true/false), a direct download link to the firmware's \[public] binary package, and whether the device should be reset. Customers may disable OTA updates, reset their device to transfer ownership, or destroy data from their web account.
+When the TRMNL web server responds to a device's request we include only a few fields. These include the image link + filename, the `refresh_rate` in seconds, `update_firmware` (true/false), a direct download link to the firmware's \[public] binary package, and whether the device should be reset. Full response shape is in our [API docs](https://trmnl.com/api-docs). Customers may disable OTA updates, reset their device to transfer ownership, or destroy data from their web account.
 
 **TRMNL does not store rendered content over time.**
 

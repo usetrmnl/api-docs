@@ -1,6 +1,7 @@
 # Table of contents
 
 * [👋 Overview](README.md)
+* [📖 API Reference](https://trmnl.com/api-docs)
 * [How it Works](how-it-works.md)
 
 ## Private Plugins

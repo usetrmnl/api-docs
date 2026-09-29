@@ -10,15 +10,14 @@ The TRMNL design system is actively improving to suit the needs of our [growing 
 
 As we extend [native components](https://trmnl.com/framework), you are welcome to provide in-line styling to plugin markup to achieve your desired effect.
 
-You may also included 3rd party libraries, for example [Highcharts](https://www.highcharts.com/), to create data visualizations like charts and graphs.
+You may also include 3rd party libraries, for example [Highcharts](https://www.highcharts.com/), to create data visualizations like charts and graphs.
 
 ## Quickstart
 
 Here's some example Markup content that will render an _ugly_ line chart:
 
 ```
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartkick@5.0.1/dist/chartkick.min.js"></script><div class="screen">
+<script src="https://trmnl.com/js/highcharts/12.3.0/highcharts.js"></script>
 
 <div class="layout">
   <div id="container">
@@ -26,6 +25,8 @@ Here's some example Markup content that will render an _ugly_ line chart:
 </div>
 <script>
 Highcharts.chart("container", {
+    chart: { animation: false },
+    plotOptions: { series: { animation: false } },
     title: {
         text: "Chart demo"
     },
@@ -62,6 +63,15 @@ Here's another line chart with TRMNL-friendly styling:
 
 Get all the code + learn how to do this here:\
 [https://trmnl.com/framework/chart](https://trmnl.com/framework/chart)
+
+## How we render JavaScript
+
+We load your markup in a real browser, wait for it, then take a screenshot. A few rules follow from that:
+
+* **Draw on page load.** We wait up to 5 seconds for the page to finish loading (and for any Highcharts charts to finish drawing), then freeze `setTimeout`, `setInterval` + `requestAnimationFrame` before the screenshot. Anything scheduled for later never runs. If the page isn't ready in time *and* logged a console error, the render fails.
+* **Turn off animations.** A chart captured mid-animation looks half drawn, hence `animation: false` above.
+* **Load libraries from TRMNL when you can.** We host Highcharts at `https://trmnl.com/js/highcharts/12.3.0/` (plus `highcharts-more.js` + `pattern-fill.js`), which is what the [chart examples](https://trmnl.com/framework/chart) use.
+* **Skip a render from JS.** Set `window.TRMNL_SKIP_DISPLAY = true` to take this plugin out of your playlist rotation until a later render drops the flag, or `window.TRMNL_SKIP_SCREEN_GENERATION = true` to keep showing the previous screen.
 
 ## More Charts and Graphs
 

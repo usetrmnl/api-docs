@@ -19,7 +19,7 @@ For more context on this feature, go [here](https://trmnl.com/blog/calendar-hack
 First, set up + hide an instance of the plugin you want to modify.
 
 1. Connect a plugin, for example the Weather, Stock Prices, Calendar, etc
-2. Navigate to Playlists and "hide" the plugin (click the eyeball icon), assuming you don't want to see its native form on your device. **This is important** because only plugins on a Playlist will sync fresh data.
+2. Navigate to Playlists and "hide" the plugin (click the eyeball icon), assuming you don't want to see its native form on your device. **This is important** because only plugins on a Playlist (or inside a Mashup) will sync fresh data. A hidden plugin still refreshes as long as a Plugin Merge plugin reads from it.
 
 Next, build a Private Plugin.
 
@@ -28,11 +28,23 @@ Next, build a Private Plugin.
 
 <figure><img src="../.gitbook/assets/trmnl-data-mode-edit-markup.png" alt=""><figcaption><p>Private Plugin > Edit Markup</p></figcaption></figure>
 
-Parsed data will appear inside a `<plugin_keyname>_<plugin_setting_id>` node of the "Merge Variables" dropdown. You may need to click "Force Refresh" from the private plugin settings view to ensure data has been fetched.
+Parsed data will appear inside a `<plugin_keyname>_<plugin_setting_id>` node of the "Your variables" dropdown, for example `google_calendar_12345`. You may need to click "Force Refresh" from the private plugin settings view to ensure data has been fetched.
 
 <figure><img src="../.gitbook/assets/TRMNL-data-mode-example-node.png" alt=""><figcaption><p>Example - Outlook Calendar events JSON</p></figcaption></figure>
 
 Reference as many connected plugins as you'd like. When TRMNL refreshes those plugins per your [Playlist Schedule](https://help.trmnl.com/en/articles/11663305-playlist-scheduler), updated values will map over to your private plugin with the Plugin Merge strategy.
+
+### Prefer raw JSON?
+
+Skip the private plugin and read a native plugin's data over the [Account API](account.md), with an account API key holding the `read` capability:
+
+```
+curl https://trmnl.com/api/plugin_settings/12345/data --header "Authorization: Bearer trmnl_xxxxxx"
+```
+
+This responds with `{"data": {...}}` -- the same variables the plugin currently renders from. Private + global plugins answer `422` here.
+
+For a private plugin, `GET /api/plugin_settings/{id}/merge_variables` shows what its markup can reference, Plugin Merge nodes included. It's built for editing markup, so lists longer than 3 items come back as a count + 2 samples rather than the full data. Details live in the [OpenAPI spec](https://trmnl.com/api-docs).
 
 ### Markup Quickstart
 

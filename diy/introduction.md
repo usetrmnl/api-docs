@@ -15,20 +15,20 @@ There are 4 flavors to building the perfect setup for your needs:
 
 After starting TRMNL and going down the rabbit hole of DIY smart home, IoT, e-ink, and gadget communities, it became clear that end-to-end ownership, security, and data privacy are critical ingredients to building trust.
 
-With this in mind we decided to [open source our firmware](https://github.com/usetrmnl/firmware) and provide guides to reproduce the TRMNL experience _without_ our servers in the middle.
+With this in mind we decided to [open source our firmware](https://github.com/usetrmnl/trmnl-firmware) and provide guides to reproduce the TRMNL experience _without_ our servers in the middle.
 
 When considering how to build your own e-ink dashboard, it is our opinion that...
 
 * If you're not comfortable with coding, Option #1 is ideal.
 * If you're comfortable with high-level programming languages, Option #4 provides an 80/20 approach to privacy + security without breaking the bank or spending hours coding.
-* If you have have experience with micro controllers, Option #2 will give you the pride of full control over the look and feel of your device.
+* If you have experience with microcontrollers, Option #2 will give you the pride of full control over the look and feel of your device.
 * If you are a l33t programmer or simply have access to AI (half joking), Option #3 is the most comprehensive offering to customize TRMNL however you'd like.
 
 ### Prerequisites
 
 Options 1, 3, and 4 are available to all customers for no extra charge.
 
-Option 2 requires a small monthly fee to cover your compute time on our servers, since we don't make any revenue on a device sale.
+Option 2 requires a one-time [BYOD license](https://shop.trmnl.com/products/byod) to cover your compute time on our servers, since we don't make any revenue on a device sale. Not sure yet? Start a [14-day free trial](https://trmnl.com/byod-trial) -- a refundable $1 hold keeps out spam.
 
 ### Next steps
 

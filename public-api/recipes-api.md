@@ -20,7 +20,11 @@ https://trmnl.com/recipes.json?search=weather&sort-by=newest
 
 <mark style="color:green;">`GET`</mark> `/recipes.json`
 
-This endpoint is in alpha testing and may be moved (to `/api/recipes`) or changed (to `/api/plugins`) before the end of 2025.
+Returns published recipes only. Unlisted recipes stay out of the list, but you can still fetch one by ID (below).
+
+{% hint style="info" %}
+Need more than read access -- recipe markup, or installing a recipe on your account? Use the authenticated [`/api/recipes`](https://trmnl.com/api-docs) endpoints instead.
+{% endhint %}
 
 **Example Request**\
 `https://trmnl.com/recipes.json?sort-by=install`
@@ -29,15 +33,17 @@ This endpoint is in alpha testing and may be moved (to `/api/recipes`) or change
 
 All are optional.
 
-<table><thead><tr><th width="194.3828125">Name</th><th width="180.94921875">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>search</code></td><td>string</td><td>Name of the plugin (partial match OK)</td></tr><tr><td><code>sort-by</code></td><td>string</td><td>Option by which to rank results</td></tr><tr><td><code>user_id</code></td><td>integer</td><td>ID of the author, e.g. 51</td></tr><tr><td><code>per_page</code></td><td>integer</td><td>Results count (maximum 100, default 25)</td></tr></tbody></table>
+<table><thead><tr><th width="194.3828125">Name</th><th width="180.94921875">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>search</code></td><td>string</td><td>Full-text search. Partial words OK, plus small typos in the name. Ignored under 3 characters. Prefix with <code>#</code> to filter by <a href="categories-api.md">category</a>, URL-encoded as <code>%23calendar</code></td></tr><tr><td><code>sort-by</code></td><td>string</td><td>Option by which to rank results (default <code>newest</code>)</td></tr><tr><td><code>user_id</code></td><td>integer</td><td>ID of the author, e.g. 51</td></tr><tr><td><code>per_page</code></td><td>integer</td><td>Results count (maximum 100, default 25)</td></tr><tr><td><code>page</code></td><td>integer</td><td>Page number (default 1)</td></tr></tbody></table>
 
 Valid `sort-by` options:
 
 * oldest
 * newest
-* popularity
+* popularity (installs + forks)
 * fork
 * install
+
+Searches are limited to 60 requests per minute per IP address. Past that you'll get a `429`.
 
 **Example Response**
 
@@ -49,9 +55,11 @@ Valid `sort-by` options:
       "id": 49610,
       "user_id": 1158,
       "name": "Weather Chum",
+      "description": "Todays weather, hourly and forecast",
       "published_at": "2025-05-14T05:32:00.000Z",
       "icon_url": "https://trmnl-public.s3.us-east-2.amazonaws.com/ajjlbek4cabcvhk3s1lxggn8cgon",
-      "screenshot_url": "https://trmnl.s3.us-east-2.amazonaws.com/qv5d2r4hg4gxe0tnwhiatdfhuqzj?response-content-disposition=inline%3B%20filename%3D%22plugin-2025-04-30T19-47-15Z-21f687%22%3B%20filename%2A%3DUTF-8%27%27plugin-2025-04-30T19-47-15Z-21f687&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA47CRUQUU4VKBBMOF%2F20251024%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251024T210603Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c5795146177d7f539b0743890018338b8a9d7188d685d1e54dde83d842eb404d",
+      "icon_content_type": "image/png",
+      "screenshot_url": "https://trmnl-public.s3.us-east-2.amazonaws.com/kh7q90o1biy072d2et0u7t3qf8km",
       "author_bio": null,
       "custom_fields": [
         {
@@ -76,25 +84,29 @@ Valid `sort-by` options:
         }
       ],
       "stats": {
-        "installs": 1,
-        "forks": 1230
+        "installs": 1102,
+        "forks": 383
       }
   }],
-  "total": 12,
+  "total": 38,
   "from": 1,
-  "to": 12,
+  "to": 25,
   "per_page": 25,
   "current_page": 1,
   "prev_page_url": null,
-  "next_page_url": "/recipes?page=2&search=weather&sort_by=popularity"
+  "next_page_url": "/recipes.json?page=2&per_page=25&search=weather&sort-by=popularity"
 }
 ```
 {% endtab %}
 {% endtabs %}
 
+`author_bio` is the recipe's `author_bio` custom field, repeated at the top level for convenience (`null` when the recipe has none). `stats` counts `installs` + `forks` of the recipe.
+
 ### Get a single Recipe
 
 <mark style="color:green;">`GET`</mark> `/recipes/{id}.json`
+
+Works for published + unlisted recipes. An unknown ID redirects (`302`) to `/recipes` instead of returning a `404`.
 
 **Example Request**\
 `https://trmnl.com/recipes/16382.json`
@@ -109,9 +121,11 @@ Valid `sort-by` options:
     "id": 16382,
     "user_id": 934,
     "name": "Matrix",
-    "published_at":"2025-02-10T11:33:00.000Z",
+    "description": "The Digital Rain",
+    "published_at": "2025-02-10T11:33:00.000Z",
     "icon_url": "https://trmnl-public.s3.us-east-2.amazonaws.com/mtpxyr22spnwjheeh5kv1p7tpk6n",
-    "screenshot_url": "https://trmnl.s3.us-east-2.amazonaws.com/jly9u094jtsc2bwmnhlnmwjnsokk?response-content-disposition=inline%3B%20filename%3D%22plugin-2025-04-10T12-47-23Z-776f51%22%3B%20filename%2A%3DUTF-8%27%27plugin-2025-04-10T12-47-23Z-776f51&response-content-type=image%2Fbmp&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA47CRUQUU4VKBBMOF%2F20251024%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20251024T210933Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=828e75fc333464c3ba13654c70434d307a8ca48053cd102f4a10a55e953c3ce2",
+    "icon_content_type": "image/png",
+    "screenshot_url": "https://trmnl-public.s3.us-east-2.amazonaws.com/7i54we946jo1uhiq4y29dqwdtxgm",
     "author_bio": {
       "keyname": "doesnt_matter",
       "name": "About This Plugin",
@@ -136,8 +150,8 @@ Valid `sort-by` options:
       }
     ],
     "stats": {
-      "installs": 25,
-      "forks": 176
+      "installs": 285,
+      "forks": 37
     }
   }
 }

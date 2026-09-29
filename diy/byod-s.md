@@ -4,7 +4,7 @@ description: Bring your own device, and build your own server for the device to 
 
 # BYOD/S
 
-In the BYOD/S configuration, the only TRMNL IP is our [open source firmware](https://github.com/usetrmnl/firmware).
+In the BYOD/S configuration, the only TRMNL IP is our [open source firmware](https://github.com/usetrmnl/trmnl-firmware).
 
 ### Device setup
 
@@ -12,19 +12,28 @@ See our [alternate screens](https://github.com/usetrmnl/#alternative-screens-and
 
 ### Server quickstart
 
-The TRMNL web server generates PNG images. When a device pings our [Display API](../private-api/screens.md), the next-in-queue image is shared as an absolute URL inside a JSON response like this:
+The TRMNL web server generates PNG images (BMP for the legacy OG model, WebP for a few color displays). When a device pings our [Display API](../private-api/screens.md), the next-in-queue image is shared as an absolute URL inside a JSON response like this:
 
-```
+```json
 {
-  "image_url"=>"https://trmnl.s3.us-east-2.amazonaws.com/path-to-img.png"
+  "status": 0,
+  "image_url": "https://your-server.local/screens/plugin-123.png",
+  "filename": "plugin-123.png",
+  "refresh_rate": 900,
+  "reset_firmware": false,
+  "update_firmware": false,
+  "firmware_url": "",
+  "special_function": "identify"
 }
 ```
+
+The firmware treats `filename` as a cache key -- if it already has a file by that name, it skips the download. Give every new image a new `filename`. `refresh_rate` is the number of seconds to sleep before the next ping.
 
 For ready-made OSS server clients, see [BYOS Implementations](https://docs.trmnl.com/go/diy/byos#implementations). To develop your own server that is TRMNL firmware compatible out of the box:
 
 1. [Build or jailbreak a device](byod.md)
 2. Change the base URL to your own server or local network from the WiFi Captive Portal
-3. Mimic the `api/setup` and `api/display` endpoints per our [firmware README](https://github.com/usetrmnl/firmware)
+3. Mimic the `api/setup` and `api/display` endpoints per our [firmware README](https://github.com/usetrmnl/trmnl-firmware#web-server-endpoints) + the [BYOS API minimum](byos.md#api)
 4. Follow our [ImageMagick guide](imagemagick-guide.md) to create TRMNL firmware compatible images
 5. Profit(?)
 

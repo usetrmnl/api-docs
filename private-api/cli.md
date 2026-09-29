@@ -39,7 +39,7 @@ You can also limit the CLI to specific devices + plugin settings on that screen.
 
 ### API keys (scripts + CI)
 
-No browser? Create an API key under [Account > API keys](https://trmnl.com/account), give it only the capabilities it needs, then:
+No browser? Create an API key under [Account API keys](https://trmnl.com/account), give it only the capabilities it needs, then:
 
 ```sh
 export TRMNL_API_KEY=trmnl_xxxxx

@@ -20,6 +20,8 @@ This makes it a great place to define common JS and CSS resources without having
 <span class="shout">Brawndo! It's got what plants crave!</span>
 ```
 
+Leave a layout empty and we render the shared markup on its own for that layout -- handy if you'd rather write one responsive template than four. Shared markup is `markup_shared` in the [API](https://trmnl.com/api-docs) and `shared.liquid` in a plugin archive.
+
 ### Reusable Liquid Templates
 
 You can also define custom Liquid templates (or "partials", or "components" – pick your favorite terminology) to reuse chunks of markup in any view layout.
@@ -35,3 +37,5 @@ Hello there, {{ name }}.
 <!-- view markup -->
 {% render "say_hello", name: "General Kenobi" %}
 ```
+
+Template names may only contain letters, numbers, underscores + slashes (e.g. `components/header`). Like any `{% render %}`, a template only sees the variables you pass in, so hand it what it needs: `{% render "say_hello", name: trmnl.user.first_name %}`.
