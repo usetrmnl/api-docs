@@ -7,7 +7,7 @@ description: An introduction to running TRMNL on your own hardware.
 There are 4 flavors to building the perfect setup for your needs:
 
 1. **Default** - buy our device, that runs our firmware, and pings our server
-2. **BYOD** - build your own device, that runs our firmware, and pings our server
+2. **BYOD** - bring your own hardware (a DIY build, or an e-reader or tablet you already own), and ping our server
 3. **BYOD/S** - build your own device, mod our firmware, and ping your own server
 4. **BYOS** - buy our device, mod our firmware, and ping your own server
 
@@ -21,7 +21,7 @@ When considering how to build your own e-ink dashboard, it is our opinion that..
 
 * If you're not comfortable with coding, Option #1 is ideal.
 * If you're comfortable with high-level programming languages, Option #4 provides an 80/20 approach to privacy + security without breaking the bank or spending hours coding.
-* If you have experience with microcontrollers, Option #2 will give you the pride of full control over the look and feel of your device.
+* If you have an old e-reader in a drawer or experience with microcontrollers, Option #2 will give you the pride of full control over the look and feel of your device.
 * If you are a l33t programmer or simply have access to AI (half joking), Option #3 is the most comprehensive offering to customize TRMNL however you'd like.
 
 ### Prerequisites
