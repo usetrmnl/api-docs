@@ -26,21 +26,64 @@ Mirroring a TRMNL you already own, for example on an iPad, needs no license.
 
 ### Supported hardware
 
-| Hardware | Software | Setup |
-| --- | --- | --- |
-| Seeed Studio OG DIY Kit, XIAO 7.5" panel, reTerminal E1001 / E1002 / E1003 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
-| Xteink X4 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
-| Other ESP32 boards + ePaper panels | [TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware) | Build and flash (see [Build from scratch](#build-from-scratch)) |
-| Kindle | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
-| Kobo | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
-| reMarkable | [trmnl-remarkable](https://github.com/usetrmnl/trmnl-remarkable) (Paper Pro) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (reMarkable 2) | Developer Mode |
-| Nook GlowLight 4 | [trmnl-nook](https://github.com/usetrmnl/trmnl-nook) | ADB sideload |
-| Nook Simple Touch | [trmnl-nook-simple-touch](https://github.com/usetrmnl/trmnl-nook-simple-touch) | Root |
-| BOOX and other Android devices | [TRMNL Display](https://play.google.com/store/apps/details?id=ink.trmnl.android) ([source](https://github.com/usetrmnl/trmnl-android)) | App install |
-| Raspberry Pi / Linux SBC (HDMI, Waveshare HATs, Pimoroni Inky Impression) | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
-| Inkplate | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
-| Playdate | [trmnl-playdate](https://github.com/usetrmnl/trmnl-playdate) | Sideload |
-| iPad | [trmnl.com/mirror](https://trmnl.com/mirror) mirrors a TRMNL you own, no license needed. A native iPad mode in the TRMNL Companion app is coming soon. | Open in Safari |
+| Model | Resolution | Colors | Software | Setup |
+| --- | --- | --- | --- | --- |
+| Amazon Kindle 2024 `amazon_kindle_2024` | 1400x840 | 256 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Amazon Kindle 7 `amazon_kindle_7` | 800x600 | 256 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Amazon Kindle Oasis 2 `amazon_kindle_oasis_2` | 1680x1264 | 256 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Amazon Kindle PW 6th Gen `amazon_kindle_paperwhite_6th_gen` | 1024x768 | 256 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Amazon Kindle PW 7th Gen `amazon_kindle_paperwhite_7th_gen` | 1448x1072 | 256 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Amazon Kindle PW Signature 11th Gen `amazon_kindle_paperwhite_signature_11th_gen` | 1648x1236 | 16 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Amazon Kindle Scribe `amazon_kindle_scribe` | 2480x1860 | 256 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Amazon Kindle Voyage `amazon_kindle_voyage` | 1448x1072 | 256 | [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (recommended) or [trmnl-kindle](https://github.com/usetrmnl/trmnl-kindle) | Jailbreak |
+| Avalue EPD-42S 42" Display Board `avalue_epd_42s` | 2880x2160 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| Custom Device `byod_custom` | 800x480 | 2 | [TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware) | Build and flash (see [Build from scratch](#build-from-scratch)) |
+| ED133UT2 Active Matrix `ed133ut2` | 1600x1200 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| Generic 16:9 Display `generic_16_9` | 1920x1080 | 256 | [See wizard](https://trmnl.com/byod) |  |
+| Inkplate 10 `inkplate_10` | 1200x825 | 4 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
+| Inkplate 13 Spectra `inkplate_13_spectra` | 1600x1200 | 2 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
+| Inkplate 5.2 `inkplate_5_2` | 1280x720 | 4 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
+| Inkplate 6 Plus `inkplate_6_plus` | 1024x758 | 4 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
+| Inkplate 6COLOR `inkplate_6_color` | 600x448 | 2 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
+| Inky Impression 13.3 `inky_impression_13_3` | 1600x1200 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
+| Inky Impression 7.3 `inky_impression_7_3` | 800x480 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
+| Kobo Aura H2O Edition 2 `kobo_aura_h2o_2` | 1430x1080 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Aura HD `kobo_aura_hd` | 1440x1080 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Aura One `kobo_aura_one` | 1872x1404 | 256 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Clara 2E `kobo_clara_2e` | 1072x1448 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Forma `kobo_forma` | 1920x1440 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Glo `kobo_glo` | 1024x768 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Libra 2 `kobo_libra_2` | 1680x1264 | 256 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Libra Color `kobo_libra_color` | 1680x1264 | 4,096 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Sage `kobo_sage` | 1920x1440 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| Kobo Touch `kobo_touch` | 800x600 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
+| M5PaperS3 `m5_paper_s3` | 960x540 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| Meta Portal `meta_portal` | 1280x800 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
+| Nook Simple Touch `nook_simple_touch` | 800x600 | 256 | [trmnl-nook-simple-touch](https://github.com/usetrmnl/trmnl-nook-simple-touch) | Root |
+| Onyx BOOX Go 10.3 (Gen II) Lumi `onyx_boox_go_10_3_lumi` | 2480x1860 | 256 | [TRMNL Display](https://play.google.com/store/apps/details?id=ink.trmnl.android) ([source](https://github.com/usetrmnl/trmnl-android)) | App install |
+| Onyx BOOX Go 7 `onyx_boox_go_7` | 1680x1264 | 16 | [TRMNL Display](https://play.google.com/store/apps/details?id=ink.trmnl.android) ([source](https://github.com/usetrmnl/trmnl-android)) | App install |
+| Onyx BOOX Nova Air C `onxy_boox_nova_air_c` | 1872x1404 | 4,096 | [TRMNL Display](https://play.google.com/store/apps/details?id=ink.trmnl.android) ([source](https://github.com/usetrmnl/trmnl-android)) | App install |
+| Onyx BOOX Palma `palma` | 1648x824 | 256 | [TRMNL Display](https://play.google.com/store/apps/details?id=ink.trmnl.android) ([source](https://github.com/usetrmnl/trmnl-android)) | App install |
+| Onyx BOOX Poke 5 `onyx_boox_poke_5` | 1072x1448 | 16 | [TRMNL Display](https://play.google.com/store/apps/details?id=ink.trmnl.android) ([source](https://github.com/usetrmnl/trmnl-android)) | App install |
+| OpenPeak OpenFrame `openframe` | 800x480 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
+| Playdate `playdate` | 400x240 | 2 | [trmnl-playdate](https://github.com/usetrmnl/trmnl-playdate) | Sideload |
+| Raspberry Pi Touch 2 `raspberry_pi_touch_2` | 1280x720 | 16,777,216 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
+| reMarkable 2 `remarkable_paper_2` | 1404x1872 | 16 | [trmnl-remarkable](https://github.com/usetrmnl/trmnl-remarkable) (Paper Pro) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) (reMarkable 2) | Developer Mode |
+| Seeed E1001 Monochrome `seeed_e1001` | 800x480 | 4 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
+| Seeed E1002 `seeed_e1002` | 800x480 | 6 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
+| Seeed E1003 (4-bit) `seeed_e1003` | 1872x1404 | 16 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
+| Seeed E1004 `seeed_e1004` | 1600x1200 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| Seeed Sticky `seeed_sticky` | 800x480 | 4 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
+| TCL NxtPaper 14 `tcl_nxtpaper_14` | 2400x1600 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
+| Tidbyt `tidbyt` | 64x32 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
+| Vestaboard `vestaboard` | 22x6 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
+| Waveshare 4.26" (2-bit) `waveshare_4_26` | 800x480 | 4 | [TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware) | Build and flash (see [Build from scratch](#build-from-scratch)) |
+| Waveshare 5.83" (Steam Machine) `waveshare_5_8_bw` | 648x480 | 4 | [TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware) | Build and flash (see [Build from scratch](#build-from-scratch)) |
+| Waveshare 7.5" B/W `waveshare_7_5_bw` | 800x480 | 2 | [TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware) | Build and flash (see [Build from scratch](#build-from-scratch)) |
+| Waveshare 7.5" B/W/R `waveshare_7_5_bwr` | 800x480 | 2 | [TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware) | Build and flash (see [Build from scratch](#build-from-scratch)) |
+| Waveshare 7.5" B/W/R/Y `waveshare_7_5_bwry` | 800x480 | 2 | [TRMNL firmware](https://github.com/usetrmnl/trmnl-firmware) | Build and flash (see [Build from scratch](#build-from-scratch)) |
+| Xteink X3 `xteink_x3` | 792x528 | 4 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
+| Xteink X4 `xteink_x4` | 800x480 | 4 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
 
 Exact resolutions and color palettes for every device model are at [trmnl.com/api/models](https://trmnl.com/api/models).
 
