@@ -9,6 +9,7 @@
 * [Screen Templating](private-plugins/templates.md)
 * [Screen Templating (Graphics)](private-plugins/templates-advanced.md)
 * [Webhooks](private-plugins/webhooks.md)
+* [Async Polling](private-plugins/async-polling.md)
 * [Reusing Markup](reusing-markup.md)
 
 ## DIY TRMNL (Advanced) <a href="#diy" id="diy"></a>
