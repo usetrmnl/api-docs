@@ -94,14 +94,54 @@ curl "http://byos.local/api/display" \
      -H 'Content-Type: application/json'
 ```
 
+Example response:
+
+```json
+{
+  "status": 0,
+  "image_url": "http://byos.local/images/screen-3f2a9c-1781785364.png",
+  "filename": "screen-3f2a9c-1781785364",
+  "refresh_rate": 900,
+  "reset_firmware": false,
+  "update_firmware": false,
+  "firmware_url": null,
+  "special_function": "identify",
+  "maximum_compatibility": false,
+  "temperature_profile": "default"
+}
+```
+
 The firmware reads these fields:
 
 * `status` -- `0` draws `image_url`; `202` means "not registered yet" and the device polls again in a few seconds
-* `image_url` + `filename` -- `filename` is a cache key, so the device only downloads `image_url` when `filename` changes
-* `refresh_rate` -- seconds to sleep before the next request
+* `image_url` + `filename` -- see [Filenames](#filenames)
+* `refresh_rate` -- seconds to sleep before the next request. Send a number (`900`), not a string (`"900"`); the firmware reads a string as `0` and wakes again at once
 * `reset_firmware` -- `true` makes the device erase its WiFi credentials + API key
-* `update_firmware` + `firmware_url` -- `true` + a `.bin` URL triggers an OTA update
-* `special_function` -- what a button press does (e.g. `identify`, `sleep`, `rewind`)
+* `update_firmware` + `firmware_url` -- `true` + a `.bin` URL triggers an OTA update. Firmware builds are per model, so only send a TRMNL X build to a TRMNL X
+* `special_function` -- what a button press does: `none`, `identify`, `sleep`, `add_wifi`, `restart_playlist`, `rewind`, `send_to_me` or `guest_mode`. This is a setting, so send the same value on every response
+* `maximum_compatibility` -- `true` fixes display issues on some ePaper driver chips but turns off fast refresh. Optional, defaults to `false`
+* `temperature_profile` -- `default`, `a` or `b`. Leave it at `default` unless images look washed out
+
+Our hosted server also sends `touchbar_mode` to a TRMNL X. Current firmware ignores it, so you can leave it out.
+
+#### Filenames
+
+The device saves each new image to flash under its `filename`. When a response names a file it already has, it shows that copy and downloads nothing. So:
+
+* Change `filename` only when the image changes, never on every request. A new name on every request downloads + writes the image on every wake.
+* Use the format `<name>-<id>-<unix time>`, e.g. `screen-3f2a9c-1781785364`. `<name>-<id>` (13 characters) names the screen and never changes; the time is when this image was made. Each time the device saves a new image, it deletes older images of the same screen, and every saved image that does not end in a 10-digit timestamp or is more than 24 hours old.
+* Keep it to 31 characters or less. The device shortens a longer name to its first 7 + last 17 characters, so two long names can collide and the second image never shows.
+
+#### Images
+
+Render each image at the size the device sends in its `Width` + `Height` headers, and serve it with the right `Content-Type`. The firmware picks the decoder from that header, not from the URL: `image/png` for PNG, `image/jpeg` for JPEG. It reads any other response as a BMP.
+
+| Model (`Model` header) | Size | Grays | Formats | Largest file |
+| --- | --- | --- | --- | --- |
+| TRMNL OG (`og`) | 800x480 | 2 or 4 | PNG, JPEG, 1-bit BMP | 90,000 bytes |
+| TRMNL X (`x`) | 1872x1404 | 16 | PNG, JPEG | 750,000 bytes |
+
+A BMP must be exactly 800x480 at 1 bit per pixel.
 
 #### Logs
 
