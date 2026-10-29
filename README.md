@@ -18,16 +18,16 @@ description: >-
 [templates.md](private-plugins/templates.md)
 {% endcontent-ref %}
 
-{% content-ref url="private-api/introduction.md" %}
-[introduction.md](private-api/introduction.md)
+{% content-ref url="https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/partners-api" %}
+[Partners API](https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/partners-api)
 {% endcontent-ref %}
 
-{% content-ref url="diy/introduction.md" %}
-[introduction.md](diy/introduction.md)
+{% content-ref url="https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/private-api" %}
+[Private API](https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/private-api)
 {% endcontent-ref %}
 
-{% content-ref url="plugin-marketplace/introduction.md" %}
-[introduction.md](plugin-marketplace/introduction.md)
+{% content-ref url="https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/diy" %}
+[DIY TRMNL (Advanced)](https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/diy)
 {% endcontent-ref %}
 
 Prefer the terminal? Try the [TRMNL CLI](private-api/cli.md).
