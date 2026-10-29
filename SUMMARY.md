@@ -45,8 +45,8 @@
 * [Recipes API](public-api/recipes-api.md)
 * [Categories API](public-api/categories-api.md)
 
-## Partners API
+## Partners
 
-* [Introduction](partners-api/introduction.md)
-* [Getting Started](partners-api/getting-started.md)
-* [Provisioning Devices](partners-api/provisioning-devices.md)
+* [Introduction](partners/introduction.md)
+* [Getting Started](partners/getting-started.md)
+* [Provisioning Devices](partners/provisioning-devices.md)

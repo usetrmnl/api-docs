@@ -18,8 +18,8 @@ description: >-
 [templates.md](private-plugins/templates.md)
 {% endcontent-ref %}
 
-{% content-ref url="https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/partners-api" %}
-[Partners API](https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/partners-api)
+{% content-ref url="https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/partners" %}
+[Partners](https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/partners)
 {% endcontent-ref %}
 
 {% content-ref url="https://app.gitbook.com/s/nXhDs1PQJ2VX7ppA91eY/private-api" %}
