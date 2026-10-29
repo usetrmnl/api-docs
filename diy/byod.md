@@ -47,6 +47,7 @@ Mirroring a TRMNL you already own, for example on an iPad, needs no license.
 | Inkplate 6COLOR `inkplate_6_color` | 600x448 | 2 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
 | Inky Impression 13.3 `inky_impression_13_3` | 1600x1200 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
 | Inky Impression 7.3 `inky_impression_7_3` | 800x480 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
+| Joan 13 `joan_13` | 1600x1200 | 16 | [See wizard](https://trmnl.com/byod) |  |
 | Kobo Aura H2O Edition 2 `kobo_aura_h2o_2` | 1430x1080 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
 | Kobo Aura HD `kobo_aura_hd` | 1440x1080 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
 | Kobo Aura One `kobo_aura_one` | 1872x1404 | 256 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
@@ -57,7 +58,7 @@ Mirroring a TRMNL you already own, for example on an iPad, needs no license.
 | Kobo Libra Color `kobo_libra_color` | 1680x1264 | 4,096 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
 | Kobo Sage `kobo_sage` | 1920x1440 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
 | Kobo Touch `kobo_touch` | 800x600 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
-| M5PaperS3 `m5_paper_s3` | 960x540 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| M5PaperS3 `m5_paper_s3` | 960x540 | 16 | [See wizard](https://trmnl.com/byod) | [Flash from your browser](https://trmnl.com/flash) |
 | Meta Portal `meta_portal` | 1280x800 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
 | Nook Simple Touch `nook_simple_touch` | 800x600 | 256 | [trmnl-nook-simple-touch](https://github.com/usetrmnl/trmnl-nook-simple-touch) | Root |
 | Onyx BOOX Go 10.3 (Gen II) Lumi `onyx_boox_go_10_3_lumi` | 2480x1860 | 256 | [TRMNL Display](https://play.google.com/store/apps/details?id=ink.trmnl.android) ([source](https://github.com/usetrmnl/trmnl-android)) | App install |
@@ -72,7 +73,7 @@ Mirroring a TRMNL you already own, for example on an iPad, needs no license.
 | Seeed E1001 Monochrome `seeed_e1001` | 800x480 | 4 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
 | Seeed E1002 `seeed_e1002` | 800x480 | 6 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
 | Seeed E1003 (4-bit) `seeed_e1003` | 1872x1404 | 16 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
-| Seeed E1004 `seeed_e1004` | 1600x1200 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| Seeed E1004 `seeed_e1004` | 1600x1200 | 16 | [See wizard](https://trmnl.com/byod) | [Flash from your browser](https://trmnl.com/flash) |
 | Seeed Sticky `seeed_sticky` | 800x480 | 4 | TRMNL firmware | [Flash from your browser](https://trmnl.com/flash) |
 | TCL NxtPaper 14 `tcl_nxtpaper_14` | 2400x1600 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
 | Tidbyt `tidbyt` | 64x32 | 16,777,216 | [See wizard](https://trmnl.com/byod) |  |
