@@ -1,25 +1,23 @@
 ---
-description: Become a TRMNL Partner.
+description: Buy a batch of devices or a set of promo codes.
 ---
 
-# Getting Started
+# Buying Devices
 
-The TRMNL team manually approves each Partner, which involves the following:
+There are two ways to get TRMNL to your customers or team.
 
-1. basic KYC to ensure our intentions align (_customer delight, not bulk discounts_)
-2. program negotiation (net-30 vs on-demand payment terms, optional quotas, etc)
-3. testing the Partner's custom plugin end-to-end
+**Option 1 - A batch of devices**
 
-**KYC** includes determining a Partner point of contact, getting some sense of weekly / monthly device provision volume, and possibly a small deposit.
+Use the quote generator on our [business page](https://trmnl.com/b2b#pricing) to pick a model, color, and quantity. The higher the volume, the better the discount. Once a quote is accepted, a checkout link will be automatically generated.
 
-**Program negotiation** is simple and might look like this: "_Partner wants to award their customers a TRMNL device for 50% off. Partner can generate TRMNL discount codes for 50% off and will pay TRMNL monthly via invoice for the remaining 50%, less a 10% bulk discount._"
+Most orders ship within 1-2 business days, and then you're able to hand out devices. This option can be combined with the [Preload app](provisioning-devices.md) to provision custom plugins to end-users that automatically connect following setup. You may further personalize devices with a custom branded boot + loader screen using [Tailor](https://trmnl.com/blog/introducing-tailor). This is free if you DIY, or $5 per device if you want us to do it on your behalf.
 
-**Testing** entails the Partner providing TRMNL a demo user account on the Partner platform, with instructions to set up their custom plugin manually on an existing TRMNL account.
+**Option 2 - Promo codes**
 
-Once approved, we set you up on our side:
+Buy a set of single-use codes, then give one to each customer. They redeem it at checkout on [trmnl.com](https://trmnl.com), and we ship the device straight to them. This is essentially a drop-ship model, and there are zero logistics on your end.
 
-* your **Partner name** -- it becomes the prefix of every discount code you generate (`acme-1733187331`), so customers will see it
-* a `Client-Id` + `Access-Token` pair for the [Partners API](provisioning-devices.md). Treat them like a password; anyone holding both can generate discount codes in your name
-* your **plugin setting** -- the instance of your custom plugin, owned by your TRMNL account, that we copy onto each provisioned device
+Since promo codes are unique to each order, you can't import their device to our Preload app. With this approach, send your plugin's install link with the promo code instead, and the end user can install the plugin after claiming their device.
+
+Email [partners@trmnl.com](mailto:partners@trmnl.com) with how many codes you need and the discount you want each one to carry. For example, you might want to offer your customers 50% off a TRMNL, in which case we'd bill you for the remaining 50% (minus a discount).
 
 Next up: [Provisioning Devices](provisioning-devices.md).
