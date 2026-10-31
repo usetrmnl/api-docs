@@ -87,5 +87,5 @@ magick input.png \( -size 1x1 xc:#FF0000 xc:#00FF00 xc:#0000FF xc:#FFFF00 xc:#00
 Dithering an image
 
 ```
-magick input.png -normalize -modulate 110,150 -colorspace RGB \( -size 1x1 xc:#FF0000 xc:#00FF00 xc:#0000FF xc:#FFFF00 xc:#000000 xc:#FFFFFF +append +write mpr:palette +delete \) -dither FloydSteinberg -remap mpr:palette -colorspace sRGB -type Palette -define png:compression-level=9 -strip png:output.png
+magick input.png -colorspace HSV -channel B -sigmoidal-contrast 5,50% +channel -colorspace sRGB \( -size 1x1 xc:#FF0000 xc:#00FF00 xc:#0000FF xc:#FFFF00 xc:#000000 xc:#FFFFFF +append +write mpr:palette +delete \) -dither FloydSteinberg -remap mpr:palette -colorspace sRGB -type Palette -define png:compression-level=9 -strip png:output.png
 ```
