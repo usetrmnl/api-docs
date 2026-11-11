@@ -48,6 +48,8 @@ Mirroring a TRMNL you already own, for example on an iPad, needs no license.
 | Inky Impression 13.3 `inky_impression_13_3` | 1600x1200 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
 | Inky Impression 7.3 `inky_impression_7_3` | 800x480 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
 | Joan 13 `joan_13` | 1600x1200 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| Joan 6 `joan_6` | 1024x758 | 16 | [See wizard](https://trmnl.com/byod) |  |
+| Joan 6 Pro `joan_6_pro` | 800x600 | 16 | [See wizard](https://trmnl.com/byod) |  |
 | Kobo Aura H2O Edition 2 `kobo_aura_h2o_2` | 1430x1080 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
 | Kobo Aura HD `kobo_aura_hd` | 1440x1080 | 16 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
 | Kobo Aura One `kobo_aura_one` | 1872x1404 | 256 | [trmnl-kobo](https://github.com/usetrmnl/trmnl-kobo) or [KOReader plugin](https://github.com/usetrmnl/trmnl-koreader) | NickelMenu |
