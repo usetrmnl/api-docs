@@ -17,7 +17,7 @@ TRMNL **firmware** supports automatic OTA (over the air) updates to WiFi-connect
 3. Device renders the content, then goes to sleep for the instructed amount of time.
 
 {% hint style="info" %}
-\* "N" is the device's refresh rate, anywhere from 5 minutes to 24 hours, and each item in a [Playlist](https://help.trmnl.com/en/articles/11663305-playlist-scheduler) can override it. Plugins fetch new data + re-render on their own refresh interval, so the device always gets the most recently created screen for whichever playlist item is up next.
+\* "N" is the device's refresh rate, anywhere from 5 minutes to 24 hours, and each item in a [Playlist](https://help.trmnl.com/en/articles/17434699-playlists#h_c620aee9f4) can override it. Plugins fetch new data + re-render on their own refresh interval, so the device always gets the most recently created screen for whichever playlist item is up next.
 {% endhint %}
 
 ## Opinionated device <> server relationship
