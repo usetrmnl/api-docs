@@ -34,7 +34,7 @@ Use this legend to understand the matrix of features below.
 
 Below is a list of all implementations in various languages/frameworks you can use to self-host and manage your devices with:
 
-<table><thead><tr><th width="150.58984375">Implementation</th><th>Stack</th><th width="121.6953125">Dashboard</th><th width="172.37109375">Auto-Provisioning</th><th width="111.859375">Devices</th><th>JSON Data API</th><th>Image Previews</th><th>Playlists</th><th>Plugins</th><th>Recipes</th><th>Sensors</th><th>Docker</th><th>Test Suite</th><th>Maintained</th><th>Semantic Versioning</th></tr></thead><tbody><tr><td><a href="https://github.com/usetrmnl/terminus"><strong>Terminus</strong></a></td><td>Ruby/Hanami</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/larapaper"><strong>LaraPaper</strong></a></td><td>PHP/Laravel</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td></tr><tr><td><a href="https://github.com/usetrmnl/inker"><strong>Inker</strong></a></td><td>JavaScript</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_next"><strong>BYOS Next.js</strong></a></td><td>JavaScript/Next.js</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_fastapi"><strong>BYOS Fast API</strong></a></td><td>Python/FastAPI</td><td>🟢</td><td>⚪️</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>⚪️</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_django"><strong>BYOS Django</strong></a></td><td>Python/Django</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🔴</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_phoenix"><strong>BYOS Phoenix</strong></a></td><td>Elixir/Phoenix</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>⚪️</td></tr></tbody></table>
+<table><thead><tr><th width="150.58984375">Implementation</th><th>Stack</th><th width="121.6953125">Dashboard</th><th width="172.37109375">Auto-Provisioning</th><th width="111.859375">Devices</th><th>JSON Data API</th><th>Image Previews</th><th>Playlists</th><th>Plugins</th><th>Recipes</th><th>Sensors</th><th>Docker</th><th>Test Suite</th><th>Maintained</th><th>Semantic Versioning</th></tr></thead><tbody><tr><td><a href="https://github.com/usetrmnl/terminus"><strong>Terminus</strong></a></td><td>Ruby/Hanami</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/larapaper"><strong>LaraPaper</strong></a></td><td>PHP/Laravel</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td></tr><tr><td><a href="https://github.com/usetrmnl/inker"><strong>Inker</strong></a></td><td>JavaScript</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_next"><strong>BYOS Next.js</strong></a></td><td>JavaScript/Next.js</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🔴</td></tr><tr><td><a href="https://github.com/usetrmnl/kuroshiro"><strong>Kuroshiro</strong></a></td><td>JavaScript/Next.js</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_fastapi"><strong>BYOS Fast API</strong></a></td><td>Python/FastAPI</td><td>🟢</td><td>⚪️</td><td>🟢</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>⚪️</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>⚪️</td></tr><tr><td><a href="https://github.com/usetrmnl/byos_phoenix"><strong>BYOS Phoenix</strong></a></td><td>Elixir/Phoenix</td><td>🔴</td><td>🔴</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🟢</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>🔴</td><td>⚪️</td></tr></tbody></table>
 
 The following provides a detailed breakdown of each of the above features:
 
@@ -114,7 +114,7 @@ Example response:
 The firmware reads these fields:
 
 * `status` -- `0` draws `image_url`; `202` means "not registered yet" and the device polls again in a few seconds
-* `image_url` + `filename` -- see [Filenames](#filenames)
+* `image_url` + `filename` -- see [Filenames](byos.md#filenames)
 * `refresh_rate` -- seconds to sleep before the next request. Send a number (`900`), not a string (`"900"`); the firmware reads a string as `0` and wakes again at once
 * `reset_firmware` -- `true` makes the device erase its WiFi credentials + API key
 * `update_firmware` + `firmware_url` -- `true` + a `.bin` URL triggers an OTA update. Firmware builds are per model, so only send a TRMNL X build to a TRMNL X
@@ -136,10 +136,10 @@ The device saves each new image to flash under its `filename`. When a response n
 
 Render each image at the size the device sends in its `Width` + `Height` headers, and serve it with the right `Content-Type`. The firmware picks the decoder from that header, not from the URL: `image/png` for PNG, `image/jpeg` for JPEG. It reads any other response as a BMP.
 
-| Model (`Model` header) | Size | Grays | Formats | Largest file |
-| --- | --- | --- | --- | --- |
-| TRMNL OG (`og`) | 800x480 | 2 or 4 | PNG, JPEG, 1-bit BMP | 90,000 bytes |
-| TRMNL X (`x`) | 1872x1404 | 16 | PNG, JPEG | 750,000 bytes |
+| Model (`Model` header) | Size      | Grays  | Formats              | Largest file  |
+| ---------------------- | --------- | ------ | -------------------- | ------------- |
+| TRMNL OG (`og`)        | 800x480   | 2 or 4 | PNG, JPEG, 1-bit BMP | 90,000 bytes  |
+| TRMNL X (`x`)          | 1872x1404 | 16     | PNG, JPEG            | 750,000 bytes |
 
 A BMP must be exactly 800x480 at 1 bit per pixel.
 
