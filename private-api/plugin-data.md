@@ -32,7 +32,7 @@ Parsed data will appear inside a `<plugin_keyname>_<plugin_setting_id>` node of 
 
 <figure><img src="../.gitbook/assets/TRMNL-data-mode-example-node.png" alt=""><figcaption><p>Example - Outlook Calendar events JSON</p></figcaption></figure>
 
-Reference as many connected plugins as you'd like. When TRMNL refreshes those plugins per your [Playlist Schedule](https://help.trmnl.com/en/articles/11663305-playlist-scheduler), updated values will map over to your private plugin with the Plugin Merge strategy.
+Reference as many connected plugins as you'd like. When TRMNL refreshes those plugins per your [Playlist Schedule](https://help.trmnl.com/en/articles/17434699-playlists#h_29de0c6371), updated values will map over to your private plugin with the Plugin Merge strategy.
 
 ### Prefer raw JSON?
 

@@ -49,7 +49,7 @@ Each item in a Playlist is an _instance_ of a Plugin, which we call a PluginSett
 
 This keeps our Plugins table immutable, for example Google Calendar is just a name, icon, and form field parameters. Meanwhile details about a _connection_ to Google Calendar are stored inside a PluginSetting record. Keep this in mind as you build your own server -- do you want to allow multiple connections to the same parent plugin?
 
-TRMNL also offers a [Scheduler](https://help.trmnl.com/en/articles/11663305-playlist-scheduler). This makes it easy to dictate conditions for when and why a given plugin is displayed on your device.
+TRMNL also offers a [Scheduler](https://help.trmnl.com/en/articles/17434699-playlists#h_29de0c6371). This makes it easy to dictate conditions for when and why a given plugin is displayed on your device.
 
 <figure><img src="../.gitbook/assets/TRMNL-playlist-scheduler.png" alt="Scheduler in action"><figcaption><p>Playlist scheduler in action</p></figcaption></figure>
 
