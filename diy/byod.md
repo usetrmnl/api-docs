@@ -46,6 +46,7 @@ Mirroring a TRMNL you already own, for example on an iPad, needs no license.
 | Inkplate 6 Plus `inkplate_6_plus` | 1024x758 | 4 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
 | Inkplate 6COLOR `inkplate_6_color` | 600x448 | 2 | [HomePlate](https://github.com/lanrat/homeplate) (community) | Flash |
 | Inky Impression 13.3 `inky_impression_13_3` | 1600x1200 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
+| Inky Impression 4.0 `inky_impression_4_0` | 600x400 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
 | Inky Impression 7.3 `inky_impression_7_3` | 800x480 | 2 | [trmnl-display](https://github.com/usetrmnl/trmnl-display) | Install script |
 | Joan 13 `joan_13` | 1600x1200 | 16 | [See wizard](https://trmnl.com/byod) |  |
 | Joan 6 `joan_6` | 1024x758 | 16 | [See wizard](https://trmnl.com/byod) |  |
